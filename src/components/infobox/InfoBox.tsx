@@ -16,7 +16,7 @@ export default component$((props: ModalProps) => {
                 <h2 class="font-semibold text-xl sm:text-2xl md:text-3xl">{props.title}</h2>
                 <p class="text-md py-5 sm:py-10">{props.text}</p>
                 <div class="flex justify-center lg:justify-start pb-5 sm:pb-10 lg:pb-0">
-                    <a href={props.linkToApp} target="_blank">
+                    <a href={props.linkToApp} target="_blank" rel="noreferrer">
                     <button class="border-2 rounded-full py-1 px-3 border-blue-500 mr-5 hover:bg-slate-100 duration-300">Launch App</button>
                     </a>
                     <a href={props.pathToReadMore}>
@@ -25,7 +25,7 @@ export default component$((props: ModalProps) => {
                 </div>
             </div>
             <div class="hover:-skew-x-1 duration-500">
-                <a href={props.linkToApp} target="_blank">
+                <a href={props.linkToApp} target="_blank" rel="noreferrer">
                     <img src={props.image} class="rounded-2xl shadow-lg" width={400} height={300}/>
                 </a>
             </div>

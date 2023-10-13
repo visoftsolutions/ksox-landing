@@ -37,7 +37,7 @@ export default component$(() => {
             <p class="text-base sm:text-xl">Find us Here</p>
             <div class="flex justify-between pt-8 sm:pt-14">
               {contactItems.map((item) => (
-                <a key={item.id} href={item.link} target="_blank">
+                <a key={item.id} href={item.link} target="_blank" rel="noreferrer">
                   <img src={item.icon} width={20} height={20} />
                 </a>
               ))}

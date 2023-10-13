@@ -24,13 +24,13 @@ export default component$((props: ModalProps) => {
                         <p class="py-10 md:py-20 text-sm sm:text-lg lg:pr-20">{props.text}</p>
                         <div class="flex justify-center lg:justify-start">
 
-                            <a href={props.link1} target="_blank" class="pr-10">
+                            <a href={props.link1} target="_blank" rel="noreferrer" class="pr-10">
                                 <button class="sm:text-xl border-2 py-1 px-5 rounded-full hover:bg-gray-900 duration-300">
                                     {props.buttonText1}
                                 </button>
                             </a>
 
-                            <a href={props.link2} target={props.link2.includes("#") ? "" : "_blank"}>
+                            <a href={props.link2} target={props.link2.includes("#") ? "" : "_blank"} rel="noreferrer">
                                 <button class="sm:text-xl border-2 py-1 px-5 rounded-full hover:bg-gray-900 duration-300">
                                     {props.buttonText2}
                                 </button>
