@@ -84,7 +84,7 @@ export default component$((props: ModalProps) => {
               </div>
               
               <button class="flex mx-auto mt-8 text-lg border-2 px-3 rounded-full border-blue-700 hover:border-blue-500 duration-300">
-                <a href={props.linkToApp} target="_blank">
+                <a href={props.linkToApp} target="_blank" rel="noreferrer">
                   Launch App
                 </a>
               </button>
