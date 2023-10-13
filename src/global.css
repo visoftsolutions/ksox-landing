@@ -1,80 +1,35 @@
 /**
- * WHAT IS THIS FILE?
- *
- * Globally applied styles. No matter which components are in the page or matching route,
- * the styles in here will be applied to the Document, without any sort of CSS scoping.
- *
+ * Tailwind CSS imports
+ * View the full documentation at https://tailwindcss.com
  */
-
-:root {
-  --qwik-dark-blue: #006ce9;
-  --qwik-light-blue: #18b6f6;
-  --qwik-light-purple: #ac7ff4;
-  --qwik-dark-purple: #713fc2;
-  --qwik-dirty-black: #1d2033;
-  --qwik-dark-background: #151934;
-  --qwik-dark-text: #ffffff;
-}
-
-html {
-  line-height: 1;
-  -webkit-text-size-adjust: 100%;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  font-family:
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    "Noto Sans",
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-  padding: 0;
-  margin: 0;
-  line-height: inherit;
+    background-color: #040C18;
+    color: #D9D9D9;  
+    font-family: "Regular";                                              
 }
 
-/**
- * WHAT IS THIS FILE?
- *
- * Globally applied styles. No matter which components are in the page or matching route,
- * the styles in here will be applied to the Document, without any sort of CSS scoping.
- *
- */
-html {
-  -webkit-text-size-adjust: 100%;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  font-family:
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    "Noto Sans",
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+h1 {
+    font-family: "Bold";
 }
 
-body {
-  padding: 0;
-  line-height: inherit;
+p {
+    font-family: "Light";
 }
+
+@font-face { 
+    font-family: "Bold"; 
+    src: url("/fonts/Sansation_Bold.ttf"); 
+} 
+
+@font-face { 
+    font-family: "Regular"; 
+    src: url("/fonts/Sansation_Regular.ttf"); 
+} 
+@font-face { 
+    font-family: "Light"; 
+    src: url("/fonts/Sansation_Light.ttf"); 
+} 
