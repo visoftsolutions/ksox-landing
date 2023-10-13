@@ -26,7 +26,7 @@ export default component$((props: ModalProps) => {
             </div>
             <div class="hover:-skew-x-1 duration-500">
                 <a href={props.linkToApp} target="_blank" rel="noreferrer">
-                    <img src={props.image} class="rounded-2xl shadow-lg" width={400} height={300}/>
+                    <img src={props.image} class="rounded-2xl shadow-lg" width={600} height={400}/>
                 </a>
             </div>
         </div>

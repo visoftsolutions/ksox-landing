@@ -8,6 +8,7 @@ import InfoBox2 from "~/components/infobox/InfoBox2";
 import Footer from "~/components/footer/Footer";
 
 import PayApp from '../assets/home/PayApp.png'
+import ExchangeApp from '../assets/home/ExchangeApp.png'
 import HeroHome from '../assets/home/HeroHome.svg'
 import Server from '../assets/home/Server.svg'
 import Laptop from '../assets/home/Laptop.svg'
@@ -39,7 +40,7 @@ export default component$(() => {
           pathToReadMore="/PaymentProcessor"
           />
           <InfoBox 
-          image={PayApp}
+          image={ExchangeApp}
           title="KSOX Exchange" 
           text="A cutting-edge order book cryptocurrency exchange using zk proofs for top-notch transactional integrity."
           linkToApp="https://pay.ksox.finance/"
