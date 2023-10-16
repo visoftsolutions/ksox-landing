@@ -4,6 +4,11 @@ import DotIcon from '../../assets/icons/DotIcon.svg'
 import BarsIcon from '../../assets/icons/BarsIcon.svg'
 import TimesIcon from '../../assets/icons/TimesIcon.svg'
 
+import Discord from '../../assets/icons/Discord.svg'
+import Telegram from '../../assets/icons/Telegram.svg'
+import LinkedIn from '../../assets/icons/LinkedIn.svg'
+import XIcon from '../../assets/icons/XIcon.svg'
+
 interface ModalProps {
   linkToApp?: string,
 }
@@ -24,6 +29,26 @@ export default component$((props: ModalProps) => {
       name: "KSOX Exchange",
       href: "/Exchange"
     } 
+  ]
+
+  const contactItems = [
+    {
+      id: 1,
+      icon: Discord,
+      link: "https://discord.com/invite/d9qn83Qnbv",
+    },{
+      id: 2,
+      icon: Telegram,
+      link: "https://t.me/ksox_community",
+    },{
+      id: 3,
+      icon: LinkedIn,
+      link: "https://www.linkedin.com/company/ksox/",
+    },{
+      id: 4,
+      icon: XIcon,
+      link: "https://twitter.com/KsoxExchange",
+    }
   ]
 
   const mobileNav = useSignal(false);
@@ -74,20 +99,31 @@ export default component$((props: ModalProps) => {
         </div>
 
           <div class={mobileNav.value ? 'lg:hidden' : 'hidden'}>
+
+            <button class="flex mx-auto mt-20 mb-10 text-lg font-semibold border-2 px-3 rounded-full border-blue-700 hover:border-blue-500 duration-300">
+              <a href={props.linkToApp} target="_blank" rel="noreferrer">
+                Launch App
+              </a>
+            </button>
+
             <div class="h-screen" style="background: radial-gradient(circle at center bottom, rgb(20, 20, 60) 0%, rgba(40, 100, 255, 0) 60%); top: 0; left: 0; --tw-bg-opacity: 30%;">
-              <div class="mt-20">
+              <div>
                   {NavItems.map((item) => (
                   <a key={item.id} href={item.href} class="flex mx-auto justify-center pt-8" onClick$={() => (mobileNav.value = !mobileNav.value)}>
                     <h2>{item.name}</h2>
                   </a>
                   ))}
               </div>
-              
-              <button class="flex mx-auto mt-8 text-lg border-2 px-3 rounded-full border-blue-700 hover:border-blue-500 duration-300">
-                <a href={props.linkToApp} target="_blank" rel="noreferrer">
-                  Launch App
+
+              <div class="flex justify-center mt-20 py-4 ">
+              {contactItems.map((item) => (
+                <a key={item.id} href={item.link} target="_blank" rel="noreferrer" class="px-6">
+                  <img src={item.icon} width={20} height={20}/>
                 </a>
-              </button>
+              ))}
+              </div>
+              
+              
             </div>
           </div>
 

@@ -13,7 +13,10 @@ interface ModalProps {
 
 export default component$((props: ModalProps) => {
   return(
-    <div class="text-center lg:text-left" style="background: radial-gradient(circle at center bottom, rgb(20, 20, 60) 0%, rgba(40, 100, 255, 0) 60%); top: 0; left: 0; --tw-bg-opacity: 30%;">
+    <div 
+    class="text-center lg:text-left" 
+    style="background: radial-gradient(circle at center bottom, rgb(20, 20, 60) 0%, rgba(40, 100, 255, 0) 60%); top: 0; left: 0; --tw-bg-opacity: 30%;"
+    >
         <div class="max-w-[1270px] mx-auto px-8 md:px-20 lg-px-0" >
             <div class="flex py-52 sm:py-96">
                 <div class="grid lg:grid-cols-2 m-auto">

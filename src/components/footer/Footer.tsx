@@ -38,7 +38,7 @@ export default component$(() => {
             <div class="flex justify-between pt-8 sm:pt-14">
               {contactItems.map((item) => (
                 <a key={item.id} href={item.link} target="_blank" rel="noreferrer">
-                  <img src={item.icon} width={25} height={25} class="hover:scale-105 duration-300"/>
+                  <img src={item.icon} width={25} height={25}/>
                 </a>
               ))}
             </div>
