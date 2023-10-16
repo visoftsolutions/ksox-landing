@@ -5,8 +5,8 @@ import NavbarProduct from "~/components/navbar/NavbarProduct";
 import Footer from "~/components/footer/Footer";
 
 import InfoBox2 from "~/components/infobox/InfoBox2";
-import Image1 from '../../assets/pay/Image1.svg'
-import Image2 from '../../assets/pay/Image2.svg'
+import Image1 from '../../assets/exchange/Image1.svg'
+import Image2 from '../../assets/exchange/Image2.svg'
 
 export default component$(() => {
   return(
@@ -30,14 +30,14 @@ export default component$(() => {
           <InfoBox2 
           rightSide={true}
           image={Image1}
-          title="What You can do with KSOX Pay?"
-          text="With KSOX Pay, experience the evolution of payments. Pay for your daily essentials, transfer funds, or shop online with the assurance that your transactions are swift, effortless, and incredibly secure, all thanks to the power of zk proofs."
+          title="What does KSOX Exchange offer?"
+          text="KSOX Exchange brings to you an intuitive interface making trading cryptocurrencies a breeze. Step into the next generation of exchanges where your transactions are backed by groundbreaking zk proofs, ensuring complete transparency and trust."
           />
           <InfoBox2 
           rightSide={false}
           image={Image2}
-          title="How it Works?"
-          text="KSOX Pay functions as a dynamic payment processor system. It employs zk-STARK technology to validate the integrity of each payment, ensuring that every transaction is genuine. The zk proof system not only brings a new level of security but also provides transparency, making it a top-tier solution for modern-day payment processing."
+          title="About technology"
+          text="KSOX Exchange operates as an order book exchange platform. What sets us apart is the application of zk-STARKs, a zero-knowledge proof mechanism, to validate the integrity of trades. This methodology guarantees the authenticity of transactions, fortifying the exchange against malicious attempts and ensuring transactional confidentiality without sacrificing security."
           />
         </div>
       </div>

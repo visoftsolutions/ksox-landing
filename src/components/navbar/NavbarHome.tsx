@@ -58,7 +58,7 @@ export default component$(() => {
     <div class="fixed w-full !z-10 bg-[#040C18] shadow-xl">
         <div class="flex mx-auto justify-between max-w-[1400px] py-5 px-5 lg:px-8 text-md ">
 
-          <a href="/">
+          <a href="#home">
             <img src={logoNav} alt="logo" width={120} height={30}/>
           </a>
 

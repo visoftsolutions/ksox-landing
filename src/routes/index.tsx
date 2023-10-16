@@ -16,7 +16,7 @@ import Receipt from '../assets/home/Receipt.svg'
 
 export default component$(() => {
   return(
-    <>
+    <div id="home">
       <NavbarHome />
 
       <Hero 
@@ -77,7 +77,7 @@ export default component$(() => {
       </div>
 
       <Footer />
-    </>
+    </div>
   ) 
 });
 
