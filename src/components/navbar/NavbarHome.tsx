@@ -10,7 +10,7 @@ export default component$(() => {
     {
       id: 1,
       name: "Whitepaper",
-      href: "/"
+      href: "/Whitepaper/ksox-whitepaper.pdf"
     }, {
       id: 2,
       name: "About Products",

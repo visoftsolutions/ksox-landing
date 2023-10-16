@@ -11,8 +11,6 @@ interface ModalProps {
     link2: string, 
 }
 
-//style="background: radial-gradient(circle at center bottom, rgb(20, 20, 60) 0%, rgba(40, 100, 255, 0) 60%); top: 0; left: 0; --tw-bg-opacity: 30%;"
-
 export default component$((props: ModalProps) => {
   return(
     <div class="text-center lg:text-left" style="background: radial-gradient(circle at center bottom, rgb(20, 20, 60) 0%, rgba(40, 100, 255, 0) 60%); top: 0; left: 0; --tw-bg-opacity: 30%;">
@@ -38,8 +36,8 @@ export default component$((props: ModalProps) => {
 
                         </div>
                     </div>
-                    <div class="pt-10 lg:pt-0 flex mx-auto lg:mx-0">
-                        <img src={props.image} alt="hero image" class="lg:absolute lg:pr-32 object-contain" width={600} height={400}/>
+                    <div class="pt-10 lg:pt-0 flex justify-center lg:justify-end lg:mx-0 px-10 sm:px-20 lg:px-0">
+                        <img src={props.image} alt="hero image" class="lg:absolute  object-contain" width={480} height={480}/>
                     </div>
                 </div>
             </div>
