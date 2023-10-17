@@ -1,12 +1,14 @@
 import { component$ } from "@builder.io/qwik";
+
 import Hero from "~/components/hero/Hero";
-import ExchangeHero from '../../assets/exchange/ExchangeHero.svg'
 import NavbarProduct from "~/components/navbar/NavbarProduct";
 import Footer from "~/components/footer/Footer";
-
 import InfoBox2 from "~/components/infobox/InfoBox2";
-import Image1 from '../../assets/exchange/Image1.svg'
-import Image2 from '../../assets/exchange/Image2.svg'
+
+import ExchangeHero from '/assets/exchange/ExchangeHero.svg'
+import Image1 from '/assets/exchange/Image1.svg'
+import Image2 from '/assets/exchange/Image2.svg'
+
 
 export default component$(() => {
   return(

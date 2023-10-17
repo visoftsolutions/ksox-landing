@@ -1,8 +1,8 @@
 import { component$ } from "@builder.io/qwik";
-import Discord from '../../assets/icons/Discord.svg'
-import Telegram from '../../assets/icons/Telegram.svg'
-import LinkedIn from '../../assets/icons/LinkedIn.svg'
-import XIcon from '../../assets/icons/XIcon.svg'
+import Discord from '/assets/icons/Discord.svg'
+import Telegram from '/assets/icons/Telegram.svg'
+import LinkedIn from '/assets/icons/LinkedIn.svg'
+import XIcon from '/assets/icons/XIcon.svg'
 
 export default component$(() => {
 

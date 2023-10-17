@@ -7,12 +7,12 @@ import InfoBox from "~/components/infobox/InfoBox";
 import InfoBox2 from "~/components/infobox/InfoBox2";
 import Footer from "~/components/footer/Footer";
 
-import PayApp from '../assets/home/PayApp.png'
-import ExchangeApp from '../assets/home/ExchangeApp.png'
-import HeroHome from '../assets/home/HeroHome.svg'
-import Server from '../assets/home/Server.svg'
-import Laptop from '../assets/home/Laptop.svg'
-import Receipt from '../assets/home/Receipt.svg'
+import HeroHome from '/assets/home/HeroHome.svg'
+import PayApp from '/assets/home/PayApp.png'
+import ExchangeApp from '/assets/home/ExchangeApp.png'
+import Server from '/assets/home/Server.svg'
+import Laptop from '/assets/home/Laptop.svg'
+import Receipt from '/assets/home/Receipt.svg'
 
 export default component$(() => {
   return(

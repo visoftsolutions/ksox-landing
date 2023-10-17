@@ -1,13 +1,13 @@
 import { component$, useSignal} from "@builder.io/qwik";
-import logoNav from '../../assets/LogoNav.svg'
-import DotIcon from '../../assets/icons/DotIcon.svg'
-import BarsIcon from '../../assets/icons/BarsIcon.svg'
-import TimesIcon from '../../assets/icons/TimesIcon.svg'
 
-import Discord from '../../assets/icons/Discord.svg'
-import Telegram from '../../assets/icons/Telegram.svg'
-import LinkedIn from '../../assets/icons/LinkedIn.svg'
-import XIcon from '../../assets/icons/XIcon.svg'
+import logoNav from '/assets/LogoNav.svg'
+import DotIcon from '/assets/icons/DotIcon.svg'
+import BarsIcon from '/assets/icons/BarsIcon.svg'
+import TimesIcon from '/assets/icons/TimesIcon.svg'
+import Discord from '/assets/icons/Discord.svg'
+import Telegram from '/assets/icons/Telegram.svg'
+import LinkedIn from '/assets/icons/LinkedIn.svg'
+import XIcon from '/assets/icons/XIcon.svg'
 
 export default component$(() => {
 
@@ -16,15 +16,15 @@ export default component$(() => {
       id: 2,
       name: "About Products",
       href: "#about"
-    }, {
+    },{
       id: 3,
       name: "Contact",
       href: "#contact"
-    }, {
+    },{
       id: 4,
       name: "KSOX Pay",
       href: "/PaymentProcessor"
-    }, {
+    },{
       id: 5,
       name: "KSOX Exchange",
       href: "/Exchange"
@@ -51,7 +51,6 @@ export default component$(() => {
     }
   ]
 
-
   const mobileNav = useSignal(false)
 
   return(
@@ -65,7 +64,7 @@ export default component$(() => {
             <div class="hidden lg:flex items-center">
 
               <div class="flex">
-                <a href='src/routes/Whitepaper/ksox-whitepaper.pdf' target="_blank" rel="noreferrer">
+                <a href='/ksox-whitepaper.pdf' target="_blank" rel="noreferrer">
                 <h3 class="px-5 hover:text-white duration-300">Whitepaper</h3>
                 </a>
                 <img src={DotIcon} alt="dot" width={5} height={5}/>
@@ -104,7 +103,7 @@ export default component$(() => {
           <div class={mobileNav.value ? 'lg:hidden' : 'hidden'}>
             <div class="h-screen" style="background: radial-gradient(circle at center bottom, rgb(20, 20, 60) 0%, rgba(40, 100, 255, 0) 60%); top: 0; left: 0; --tw-bg-opacity: 30%;">
               <div class="mt-20">
-                  <a href='src/routes/Whitepaper/ksox-whitepaper.pdf' target="_blank" rel="noreferrer">
+                  <a href='/ksox-whitepaper.pdf' target="_blank" rel="noreferrer">
                     <h3 class="flex mx-auto justify-center pt-8">Whitepaper</h3>
                   </a>
                   {NavItems.map((item) => (
