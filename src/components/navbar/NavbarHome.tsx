@@ -113,13 +113,15 @@ export default component$(() => {
                   ))}
               </div>
               
-              <div class="flex justify-center mt-20 py-4 rounded-full border-2 mx-16 border-blue-600">
-              {contactItems.map((item) => (
-                <a key={item.id} href={item.link} target="_blank" rel="noreferrer" class="px-6">
-                  <img src={item.icon} width={25} height={25}/>
-                </a>
-              ))}
-              </div>
+            <div class="flex justify-center mt-20">
+              <div class="flex py-4 rounded-full border-2 mx-16 border-blue-600">
+                {contactItems.map((item) => (
+                  <a key={item.id} href={item.link} target="_blank" rel="noreferrer" class="px-6">
+                    <img src={item.icon} width={25} height={25}/>
+                  </a>
+                ))}
+                </div>
+            </div>
             </div>
           </div>
     </div> 
