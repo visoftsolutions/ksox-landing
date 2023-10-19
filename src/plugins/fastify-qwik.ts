@@ -13,7 +13,10 @@ export interface FastifyQwikOptions {
 
 const { router, notFound } = createQwikCity({ render, qwikCityPlan });
 
-const qwikPlugin: FastifyPluginAsync<FastifyQwikOptions> = async (fastify, options) => {
+const qwikPlugin: FastifyPluginAsync<FastifyQwikOptions> = async (
+  fastify,
+  options,
+) => {
   const { buildDir, distDir } = options;
 
   fastify.register(fastifyStatic, {
