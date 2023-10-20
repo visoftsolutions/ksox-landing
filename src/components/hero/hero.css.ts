@@ -3,7 +3,7 @@ import { style } from "@vanilla-extract/css";
 export const hero = style({
   textAlign: "center",
   "@media": {
-    "screen and (min-width: 1024px)": {
+    "screen and (min-width: 1124px)": {
       textAlign: "left",
     },
   },
@@ -23,7 +23,7 @@ export const heroButton = style({
     backgroundColor: "rgb(17,24,39)",
   },
   "@media": {
-    "screen and (min-width: 1024px)": {
+    "screen and (min-width: 1124px)": {
       fontSize: "20px",
     },
   },
@@ -39,7 +39,7 @@ export const heroWrapper = style({
   paddingBottom: "208px",
   display: "grid",
   "@media": {
-    "screen and (min-width: 1024px)": {
+    "screen and (min-width: 1124px)": {
       paddingRight: "32px",
       paddingLeft: "32px",
       paddingTop: "384px",
@@ -54,7 +54,7 @@ export const contentWrapper = style({
   display: "grid",
   gridTemplateColumns: "repeat(0, 1fr)",
   "@media": {
-    "screen and (min-width: 1024px)": {
+    "screen and (min-width: 1124px)": {
       gridTemplateColumns: "repeat(2, 1fr)",
       alignItems: "center"
     },
@@ -75,7 +75,7 @@ export const titleText = style({
       paddingRight: "32px",
       paddingLeft: "32px",
     },
-    "screen and (min-width: 1024px)": {
+    "screen and (min-width: 1124px)": {
       fontSize: "56px",
       paddingRight: "0px",
       paddingLeft: "0px",
@@ -96,7 +96,6 @@ export const subText = style({
   },
 });
 
-//pt-10 lg:pt-0 flex justify-center lg:justify-end lg:mx-0 px-10 sm:px-20 lg:px-0
 export const heroImage = style({
   paddingTop: "40px",
   display: "grid",
@@ -110,7 +109,7 @@ export const heroImage = style({
       paddingTop: "80px",
       paddingBottom: "80px",
     },
-    "screen and (min-width: 1024px)": {
+    "screen and (min-width: 1124px)": {
       marginLeft: "0",
       marginRight: "0",
       paddingBottom: "0px",
@@ -121,7 +120,7 @@ export const heroImage = style({
 export const image = style({
   objectFit: "contain",
   "@media": {
-    "screen and (min-width: 1024px)": {
+    "screen and (min-width: 1124px)": {
       position: "absolute",
     },
   },

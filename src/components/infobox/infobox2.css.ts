@@ -35,9 +35,7 @@ export const box = style({
             marginBottom: "80px",
             marginTop: "80px",
         },
-        "screen and (min-width: 1024px)": {
-            marginLeft: "40px",
-            marginRight: "40px",
+        "screen and (min-width: 1124px)": {
             marginBottom: "180px",
             marginTop: "180px",
         },

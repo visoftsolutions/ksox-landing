@@ -23,7 +23,7 @@ export const productImage = style({
         transform: "skewX(-1deg)",
     },
     "@media": {
-        "screen and (min-width: 1024px)": {
+        "screen and (min-width: 1124px)": {
             paddingTop: "0px",
         },
       },
@@ -50,7 +50,7 @@ export const wrapper = style({
     display: "grid",
     alignItems: "center",
     "@media": {
-        "screen and (min-width: 1024px)": {
+        "screen and (min-width: 1124px)": {
             gridTemplateColumns: "repeat(2, 1fr)",
         },
       },
@@ -59,7 +59,7 @@ export const wrapper = style({
 export const textBox = style({
     textAlign: "center",
     "@media": {
-        "screen and (min-width: 1024px)": {
+        "screen and (min-width: 1124px)": {
            textAlign: "left",
            paddingRight: "40px",
         },
