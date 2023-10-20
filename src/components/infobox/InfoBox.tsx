@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { box, infoButton, productImage, subText, textBox, titleText, wrapper } from "./infobox.css";
 
 interface ModalProps {
   image: string;
@@ -10,32 +11,32 @@ interface ModalProps {
 
 export default component$((props: ModalProps) => {
   return (
-    <div class="py-16 sm:mx-10 px-10 border-2 rounded-2xl my-20">
-      <div class="grid lg:grid-cols-2 items-center">
-        <div class="lg:pr-20 text-center lg:text-left">
-          <h2 class="font-semibold text-xl sm:text-2xl md:text-3xl">
+    <div class={box}>
+      <div class={wrapper}>
+        <div class={textBox}>
+          <h2 class={titleText}>
             {props.title}
           </h2>
-          <p class="text-md py-5 sm:py-10">{props.text}</p>
-          <div class="flex justify-center lg:justify-start pb-5 sm:pb-10 lg:pb-0">
+          <p class={subText}>{props.text}</p>
+          <div>
             <a href={props.linkToApp} target="_blank" rel="noreferrer">
-              <button class="border-2 rounded-full py-1 px-3 border-blue-500 mr-5 hover:bg-slate-100 duration-300">
+              <button class={infoButton} style="margin-right: 20px;">
                 Launch App
               </button>
             </a>
             <a href={props.pathToReadMore}>
-              <button class="border-2 rounded-full py-1 px-3 border-blue-500 hover:bg-slate-100 duration-300">
+              <button class={infoButton}>
                 Read More
               </button>
             </a>
           </div>
         </div>
-        <div class="hover:-skew-x-1 duration-500">
+        <div class={productImage}>
           <a href={props.linkToApp} target="_blank" rel="noreferrer">
             <img
               src={props.image}
-              class="rounded-2xl shadow-lg"
-              width={600}
+              style="filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)); border-radius: 1rem;"
+              width={700}
               height={400}
             />
           </a>

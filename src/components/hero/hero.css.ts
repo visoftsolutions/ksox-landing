@@ -113,7 +113,6 @@ export const heroImage = style({
     "screen and (min-width: 1024px)": {
       marginLeft: "0",
       marginRight: "0",
-      paddingTop: "0px",
       paddingBottom: "0px",
     },
   },
