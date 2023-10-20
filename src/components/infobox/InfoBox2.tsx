@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { box, imageLeft, imageRight, subText, textBoxLeft, textBoxRight, titleText, wrapper } from "./infobox2.css"; 
 
 interface ModalProps {
   image: string;
@@ -9,30 +10,30 @@ interface ModalProps {
 
 export default component$((props: ModalProps) => {
   return (
-    <div class="py-10 sm:py-16 sm:my-20 px-10">
-      <div class="grid md:grid-cols-2 items-center">
+    <div class={box}>
+      <div class={wrapper}>
         {props.rightSide ? (
           <>
-            <div class="text-center md:text-left md:pr-10">
-              <h2 class="font-semibold text-xl sm:text-3xl pb-2 sm:pb-5 text-transparent bg-clip-text bg-gradient-to-b from-blue-600 to-blue-300">
+            <div class={textBoxLeft}>
+              <h2 class={titleText}>
                 {props.title}
               </h2>
-              <p class="text-sm sm:text-lg">{props.text}</p>
+              <p class={subText}>{props.text}</p>
             </div>
-            <div class="hidden md:flex">
+            <div class={imageLeft}>
               <img src={props.image} width={280} height={200} />
             </div>
           </>
         ) : (
           <>
-            <div class="justify-end pr-10 hidden md:flex">
+            <div class={imageRight}>
               <img src={props.image} width={280} height={200} />
             </div>
-            <div class="text-center md:text-right">
-              <h2 class="font-semibold text-xl sm:text-3xl pb-2 sm:pb-5 text-transparent bg-clip-text bg-gradient-to-b from-blue-600 to-blue-300">
+            <div class={textBoxRight}>
+              <h2 class={titleText}>
                 {props.title}
               </h2>
-              <p class="text-sm sm:text-lg">{props.text}</p>
+              <p class={subText}>{props.text}</p>
             </div>
           </>
         )}
