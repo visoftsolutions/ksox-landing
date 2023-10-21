@@ -73,7 +73,6 @@ export const textBoxRight = style({
 });
 
 export const titleText = style({
-    fontWeight: "600",
     fontSize: "20px",
     paddingBottom: "14px",
     "@media": {

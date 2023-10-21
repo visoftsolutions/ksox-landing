@@ -63,7 +63,6 @@ export const contentWrapper = style({
 
 //font-bold text-transparent text-2xl sm:text-3xl md:text-5xl bg-clip-text bg-gradient-to-b from-blue-700 to-blue-200
 export const titleText = style({
-  fontWeight: "700",
   //color: "transparent",
   fontSize: "24px",
   //backgroundClip: "text",

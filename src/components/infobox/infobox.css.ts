@@ -67,7 +67,6 @@ export const textBox = style({
 });
 
 export const titleText = style({
-    fontWeight: "600",
     fontSize: "20px",
     "@media": {
       "screen and (min-width: 524px)": {

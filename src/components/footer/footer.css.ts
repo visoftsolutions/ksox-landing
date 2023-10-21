@@ -75,7 +75,6 @@ export const rightInfo = style({
 });
 
 export const subTitleText = style({
-    fontWeight: "500",
     paddingBottom: "20px",
     "@media": {
         "screen and (min-width: 524px)": {
@@ -85,7 +84,6 @@ export const subTitleText = style({
 });
 
 export const titleText = style({
-    fontWeight: "700",
     fontSize: "20px",
     "@media": {
         "screen and (min-width: 524px)": {
