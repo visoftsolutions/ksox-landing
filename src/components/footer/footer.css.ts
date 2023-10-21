@@ -74,13 +74,37 @@ export const rightInfo = style({
       },
 });
 
-//pb-5 font font-semibold text-base sm:text-2xl
-export const titleText = style({
+export const subTitleText = style({
     fontWeight: "500",
     paddingBottom: "20px",
     "@media": {
         "screen and (min-width: 524px)": {
             fontSize: "24px",
+        },
+      },
+});
+
+export const titleText = style({
+    fontWeight: "700",
+    fontSize: "20px",
+    "@media": {
+        "screen and (min-width: 524px)": {
+            fontSize: "48px",
+        },
+      },
+});
+
+export const iconsBox = style({
+    display: "grid",
+    paddingTop: "20px",
+    gridAutoFlow: "column",
+    gap: "50px",
+    justifyItems: "center",
+    justifyContent: "center",
+    alignItems: "center",
+    "@media": {
+        "screen and (min-width: 524px)": {
+            paddingTop: "56px",
         },
       },
 });

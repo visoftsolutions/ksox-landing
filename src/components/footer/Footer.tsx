@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { centerInfo, contactBox, infoWrapper, leftInfo, rightInfo, titleText, wrapper } from "./footer.css";
+import { centerInfo, contactBox, iconsBox, infoWrapper, leftInfo, rightInfo, subTitleText, titleText, wrapper } from "./footer.css";
 
 import Discord from "/assets/icons/Discord.svg";
 import Telegram from "/assets/icons/Telegram.svg";
@@ -89,36 +89,34 @@ export default component$(() => {
 
   return (
     <div
-      class="py-32"
-      style="background: radial-gradient(circle at center bottom, rgb(20, 20, 60) 0%, rgba(40, 100, 255, 0) 60%); top: 0; left: 0; --tw-bg-opacity: 30%;"
+      style="background: radial-gradient(circle at center bottom, rgb(20, 20, 60) 0%, rgba(40, 100, 255, 0) 60%); top: 0; left: 0; --tw-bg-opacity: 30%; padding-bottom: 100px;"
     >
       <div class={wrapper}>
         <div
           class={contactBox}
           id="contact"
         >
-          <div class="text-center">
-            <h1 class="text-2xl sm:text-5xl font-bold">Let's Stay in Touch!</h1>
-            <p class="text-base sm:text-xl">Find us Here</p>
-            <div class="flex justify-center pt-8 sm:pt-14">
-              {contactItems.map((item) => (
-                <a
-                  key={item.id}
-                  href={item.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  class="px-10"
-                >
-                  <img src={item.icon} width={25} height={25}/>
-                </a>
-              ))}
-            </div>
+          <div style="text-align: center;">
+            <h1 class={titleText}>Let's Stay in Touch!</h1>
+            <p>Find us Here</p>
+              <div class={iconsBox}>
+                {contactItems.map((item) => (
+                  <a
+                    key={item.id}
+                    href={item.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={item.icon} width={25} height={25}/>
+                  </a>
+                ))}
+              </div>
           </div>
         </div>
 
         <div class={infoWrapper}>
           <div class={leftInfo}>
-            <h3 class={titleText}>
+            <h3 class={subTitleText}>
               Product
             </h3>
             {productItems.map((item) => (
@@ -129,7 +127,7 @@ export default component$(() => {
                 rel="noreferrer"
               >
                 <h4 class="font-semibold">{item.title}</h4>
-                <p class="pb-5">{item.text}</p>
+                <p style="padding-bottom: 20px;">{item.text}</p>
               </a>
             ))}
             <a
@@ -137,15 +135,15 @@ export default component$(() => {
               target="_blank"
               rel="noreferrer"
             >
-              <h4 class="font-semibold">Whitepaper</h4>
-              <p class="pb-5">
+              <h4 style="font-weight: 600;">Whitepaper</h4>
+              <p style="padding-bottom: 20px;">
                 Documentation about Cryptocurrency Exchange & Payment Processor
               </p>
             </a>
           </div>
 
           <div class={centerInfo}>
-            <h3 class={titleText}>Legal</h3>
+            <h3 class={subTitleText}>Legal</h3>
             {legalItems.map((item) => (
               <a
                 key={item.id}
@@ -153,14 +151,14 @@ export default component$(() => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <h4 class="font-semibold">{item.title}</h4>
-                <p class="pb-5">{item.text}</p>
+                <h4 style="font-weight: 600;">{item.title}</h4>
+                <p style="padding-bottom: 20px;">{item.text}</p>
               </a>
             ))}
           </div>
 
           <div class={rightInfo}>
-            <h3 class={titleText}>
+            <h3 class={subTitleText}>
               Technology
             </h3>
             {technologyItems.map((item) => (
@@ -170,8 +168,8 @@ export default component$(() => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <h4 class="font-semibold">{item.title}</h4>
-                <p class="pb-5">{item.text}</p>
+                <h4 style="font-weight: 600;">{item.title}</h4>
+                <p style="padding-bottom: 20px;">{item.text}</p>
               </a>
             ))}
           </div>
