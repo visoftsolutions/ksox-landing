@@ -8,6 +8,7 @@ import Discord from "/assets/icons/Discord.svg";
 import Telegram from "/assets/icons/Telegram.svg";
 import LinkedIn from "/assets/icons/LinkedIn.svg";
 import XIcon from "/assets/icons/XIcon.svg";
+import { leftSide, navbar, rightSide, wrapper, rightSideMobile, navItem, smWrapper, sm } from "./navbarhome.css";
 
 export default component$(() => {
   const NavItems = [
@@ -59,34 +60,40 @@ export default component$(() => {
   const mobileNav = useSignal(false);
 
   return (
-    <div class="fixed w-full !z-10 bg-[#040C18] shadow-xl">
-      <div class="flex mx-auto justify-between max-w-[1400px] py-5 px-5 lg:px-8 text-md ">
-        <a href="#home">
-          <img src={logoNav} alt="logo" width={120} height={30} />
-        </a>
+    <div
+    class={navbar}
+    style="	box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);"
+    >
+      <div class={wrapper}>
+        <div class={leftSide}>
+          <a href="#home">
+            <img src={logoNav} alt="logo" width={120} height={30} />
+          </a>
+        </div>
 
-        <div class="hidden lg:flex items-center">
+        <div class={rightSide}>
+
           <div class="flex">
             <a href="/ksox-whitepaper.pdf" target="_blank" rel="noreferrer">
-              <h3 class="px-5 hover:text-white duration-300">Whitepaper</h3>
+              <h3 class={navItem}>Whitepaper</h3>
             </a>
             <img src={DotIcon} alt="dot" width={5} height={5} />
           </div>
 
           {NavItems.map((item) =>
             item.id <= 4 ? (
-              <div key={item.id} class="flex">
-                <a href={item.href}>
-                  <h3 class="px-5 hover:text-white duration-300">
+              <>
+                <a href={item.href} key={item.id}>
+                  <h3 class={navItem}>
                     {item.name}
                   </h3>
                 </a>
                 <img src={DotIcon} alt="dot" width={5} height={5} />
-              </div>
+              </>
             ) : (
               <div key={item.id}>
                 <a href={item.href}>
-                  <h3 class="pl-5 hover:text-white duration-300">
+                  <h3 class={navItem}>
                     {item.name}
                   </h3>
                 </a>
@@ -96,55 +103,54 @@ export default component$(() => {
         </div>
 
         <div
-          class="lg:hidden pt-3"
+          class={rightSideMobile}
           onClick$={() => (mobileNav.value = !mobileNav.value)}
         >
           {mobileNav.value ? (
-            <div class="flex">
-              <p class="pr-4 pt-1">Close</p>
+            <>
+              <p style="padding-top: 2px;">Close</p>
               <img
                 src={TimesIcon}
                 alt="close menu icon"
                 width={16}
                 height={16}
               />
-            </div>
+            </>
           ) : (
             <img src={BarsIcon} alt="open menu icon" width={16} height={16} />
           )}
         </div>
       </div>
 
-      <div class={mobileNav.value ? "lg:hidden" : "hidden"}>
+      <div style={mobileNav.value ? "lg:hidden" : "display: none;"}>
         <div
           class="h-screen"
           style="background: radial-gradient(circle at center bottom, rgb(20, 20, 60) 0%, rgba(40, 100, 255, 0) 60%); top: 0; left: 0; --tw-bg-opacity: 30%;"
         >
-          <div class="mt-20">
+          <div style="margin-top: 80px;">
             <a href="/ksox-whitepaper.pdf" target="_blank" rel="noreferrer">
-              <h3 class="flex mx-auto justify-center pt-8">Whitepaper</h3>
+              <h2 style="text-align: center; padding-top: 32px;">Whitepaper</h2>
             </a>
             {NavItems.map((item) => (
               <a
                 key={item.id}
                 href={item.href}
-                class="flex mx-auto justify-center pt-8"
                 onClick$={() => (mobileNav.value = !mobileNav.value)}
               >
-                <h2>{item.name}</h2>
+                <h2 style="text-align: center; padding-top: 32px;">{item.name}</h2>
               </a>
             ))}
           </div>
 
-          <div class="flex justify-center mt-20">
-            <div class="flex py-4 rounded-full border-2 mx-16 border-blue-600">
+          <div class={sm}>
+            <div class={smWrapper}>
               {contactItems.map((item) => (
                 <a
                   key={item.id}
                   href={item.link}
                   target="_blank"
                   rel="noreferrer"
-                  class="px-6"
+                  style="padding-right: 20px; padding-left: 20px;"
                 >
                   <img src={item.icon} width={25} height={25} />
                 </a>

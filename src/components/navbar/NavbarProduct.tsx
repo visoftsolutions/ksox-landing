@@ -8,6 +8,7 @@ import Discord from "/assets/icons/Discord.svg";
 import Telegram from "/assets/icons/Telegram.svg";
 import LinkedIn from "/assets/icons/LinkedIn.svg";
 import XIcon from "/assets/icons/XIcon.svg";
+import { leftSide, navbar, rightSide, wrapper } from "./navbarproduct.css";
 
 interface ModalProps {
   linkToApp?: string;
@@ -58,11 +59,13 @@ export default component$((props: ModalProps) => {
   const mobileNav = useSignal(false);
 
   return (
-    <div class="fixed w-full !z-10 bg-[#040C18] shadow-xl">
-      <div class="flex mx-auto justify-between max-w-[1400px] py-5 px-5 lg:px-8 text-md ">
-        <a href="/">
-          <img src={logoNav} alt="logo" width={120} height={60} />
-        </a>
+    <div class={navbar}>
+      <div class={wrapper}>
+        <div class={leftSide}>
+          <a href="/">
+            <img src={logoNav} alt="logo" width={120} height={60} />
+          </a>
+        </div>
 
         <div class="hidden lg:flex items-center">
           {NavItems.map((item) =>
@@ -87,11 +90,13 @@ export default component$((props: ModalProps) => {
           )}
         </div>
 
-        <a href={props.linkToApp} target="_blank" rel="noreferrer">
-          <button class="hidden lg:block text-lg border-2 px-3 rounded-full border-blue-700 hover:border-blue-500 duration-300">
-            Launch App
-          </button>
-        </a>
+        <div class={rightSide}>
+          <a href={props.linkToApp} target="_blank" rel="noreferrer">
+            <button>
+              Launch App
+            </button>
+          </a>
+        </div>
 
         <div
           class="lg:hidden pt-2"
