@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import { infoWrapper } from "./index.css";
+import { info, subText, titleText, wrapper } from "./index.css";
 
 import NavbarHome from "~/components/navbar/NavbarHome";
 import Hero from "~/components/hero/Hero";
@@ -30,9 +30,9 @@ export default component$(() => {
         link2="https://app.ksox.finance/"
       />
 
-      <div class={infoWrapper} id="about">
-        <div class="max-w-[1270px] mx-auto px-8 md:px-20 lg:px-0">
-          <h2 class="lg:pl-10 font-bold text-2xl sm:text-4xl text-center lg:text-start">
+      <div class={info} id="about">
+        <div class={wrapper}>
+          <h2 class={titleText}>
             Discover KSOX Products
           </h2>
           <InfoBox
@@ -53,11 +53,11 @@ export default component$(() => {
       </div>
 
       <div class="py-20">
-        <div class="max-w-[1270px] mx-auto px-8 md:px-20 lg:px-0 text-center lg:text-left">
-          <h2 class="lg:pl-10 font-bold text-2xl sm:text-4xl">
+        <div class={wrapper}>
+          <h2 class={titleText}>
             More About KSOX
           </h2>
-          <p class="pt-5 px-10 sm:text-lg">
+          <p class={subText}>
             Our mission at KSOX is to design a user-centric ecosystem that
             democratizes financial control, retaining its simplicity and
             decentralized character. Step into the future of finance with KSOX

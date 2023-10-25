@@ -11,7 +11,7 @@ export const infoButton = style({
     transition: "background-color",
     transitionDuration: "300ms",
     ":hover": {
-        backgroundColor: "rgb(250, 249, 246)",
+        backgroundColor: "#ffffff",
     },
 });
 

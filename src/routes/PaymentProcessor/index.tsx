@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { pay, titleText, wrapper } from "./index.css"
 
 import Hero from "~/components/hero/Hero";
 import NavbarProduct from "~/components/navbar/NavbarProduct";
@@ -8,6 +9,7 @@ import InfoBox2 from "~/components/infobox/InfoBox2";
 import PayHero from "/assets/pay/PayHero.svg";
 import Image1 from "/assets/pay/Image1.svg";
 import Image2 from "/assets/pay/Image2.svg";
+
 
 export default component$(() => {
   return (
@@ -23,9 +25,9 @@ export default component$(() => {
         link2="#readMore"
       />
 
-      <div class="py-20 bg-white text-[#1D1D1D]" id="readMore">
-        <div class="max-w-[1270px] mx-auto px-8 md:px-20 lg:px-0">
-          <h2 class="lg:pl-10 font-bold text-2xl sm:text-4xl text-center lg:text-start">
+      <div class={pay} id="readMore">
+        <div class={wrapper}>
+          <h2 class={titleText}>
             Discover KSOX Pay
           </h2>
           <InfoBox2

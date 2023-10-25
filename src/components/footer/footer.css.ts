@@ -6,6 +6,7 @@ export const wrapper = style({
     marginRight: "auto",
     paddingLeft: "16px",
     paddingRight: "16px",
+    paddingTop: "120px",
     "@media": {
         "screen and (min-width: 824px)": {
             paddingLeft: "80px",

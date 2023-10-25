@@ -8,6 +8,7 @@ import InfoBox2 from "~/components/infobox/InfoBox2";
 import ExchangeHero from "/assets/exchange/ExchangeHero.svg";
 import Image1 from "/assets/exchange/Image1.svg";
 import Image2 from "/assets/exchange/Image2.svg";
+import { exchange, titleText, wrapper } from "./index.css";
 
 export default component$(() => {
   return (
@@ -23,9 +24,9 @@ export default component$(() => {
         link2="#readMore"
       />
 
-      <div class="py-20 bg-white text-[#1D1D1D]" id="readMore">
-        <div class="max-w-[1270px] mx-auto px-8 md:px-20 lg:px-0">
-          <h2 class="lg:pl-10 font-bold text-2xl sm:text-4xl text-center lg:text-start">
+      <div class={exchange} id="readMore">
+        <div class={wrapper}>
+          <h2 class={titleText}>
             Discover KSOX Exchange
           </h2>
           <InfoBox2

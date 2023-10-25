@@ -1,6 +1,6 @@
 import { style } from "@vanilla-extract/css";
 
-export const info = style({
+export const pay = style({
     paddingTop: "80px",
     paddingBottom: "80px",
     backgroundColor: "#f8f8f8",
@@ -36,16 +36,5 @@ export const titleText = style({
         "screen and (min-width: 1124px)": {
             paddingLeft: "40px",
         },  
-      },
-});
-
-export const subText = style({
-    paddingTop: "20px",
-    paddingLeft: "40px",
-    paddingRight: "40px",
-    "@media": {
-        "screen and (min-width: 524px)": {
-        fontSize: "18px",
-        },
       },
 });
