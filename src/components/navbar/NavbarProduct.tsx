@@ -8,7 +8,7 @@ import Discord from "/assets/icons/Discord.svg";
 import Telegram from "/assets/icons/Telegram.svg";
 import LinkedIn from "/assets/icons/LinkedIn.svg";
 import XIcon from "/assets/icons/XIcon.svg";
-import { leftSide, navbar, rightSide, wrapper } from "./navbarproduct.css";
+import { center, hidden, launchButton, leftSide, mobile, navItem, navbar, rightSide, rightSideMobile, smWrapper, wrapper } from "./navbarproduct.css";
 
 interface ModalProps {
   linkToApp?: string;
@@ -67,21 +67,21 @@ export default component$((props: ModalProps) => {
           </a>
         </div>
 
-        <div class="hidden lg:flex items-center">
+        <div class={center}>
           {NavItems.map((item) =>
             item.id <= 1 ? (
-              <div key={item.id} class="flex">
-                <a href={item.href}>
-                  <h3 class="px-5 hover:text-white duration-300">
+              <>
+                <a href={item.href} key={item.id} >
+                  <h3 class={navItem}>
                     {item.name}
                   </h3>
                 </a>
                 <img src={DotIcon} alt="dot" width={5} height={5} />
-              </div>
+              </>
             ) : (
               <div key={item.id}>
                 <a href={item.href}>
-                  <h3 class="pl-5 hover:text-white duration-300">
+                  <h3 class={navItem}>
                     {item.name}
                   </h3>
                 </a>
@@ -92,64 +92,64 @@ export default component$((props: ModalProps) => {
 
         <div class={rightSide}>
           <a href={props.linkToApp} target="_blank" rel="noreferrer">
-            <button>
+            <button class={launchButton}>
               Launch App
             </button>
           </a>
         </div>
 
         <div
-          class="lg:hidden pt-2"
+          class={rightSideMobile}
           onClick$={() => (mobileNav.value = !mobileNav.value)}
         >
           {mobileNav.value ? (
-            <div class="flex">
-              <p class="pr-4 pt-1">Close</p>
+            <>
+              <p style="padding-top: 2px;">Close</p>
               <img
                 src={TimesIcon}
                 alt="close menu icon"
                 width={16}
                 height={16}
               />
-            </div>
+            </>
           ) : (
             <img src={BarsIcon} alt="open menu icon" width={16} height={16} />
           )}
         </div>
       </div>
 
-      <div class={mobileNav.value ? "lg:hidden" : "hidden"}>
-        <button class="flex mx-auto mt-20 mb-10 text-xl border-2 py-2 px-4 rounded-full border-blue-700 hover:border-blue-500 duration-300">
-          <a href={props.linkToApp} target="_blank" rel="noreferrer">
-            Launch App
-          </a>
-        </button>
+      <div class={mobileNav.value ? mobile : hidden}>
+        <div style="text-align: center; margin-top: 60px; margin-bottom: 20px;">
+          <button class={launchButton}>
+            <a href={props.linkToApp} target="_blank" rel="noreferrer">
+              Launch App
+            </a>
+          </button>
+        </div>
 
         <div
-          class="h-screen"
-          style="background: radial-gradient(circle at center bottom, rgb(20, 20, 60) 0%, rgba(40, 100, 255, 0) 60%); top: 0; left: 0; --tw-bg-opacity: 30%;"
+          style="height: 100vh; background: radial-gradient(circle at center bottom, rgb(20, 20, 60) 0%, rgba(40, 100, 255, 0) 60%); top: 0; left: 0; --tw-bg-opacity: 30%;"
         >
           <div>
             {NavItems.map((item) => (
               <a
                 key={item.id}
                 href={item.href}
-                class="flex mx-auto justify-center pt-8"
                 onClick$={() => (mobileNav.value = !mobileNav.value)}
               >
-                <h2>{item.name}</h2>
+                <h2 style="text-align: center; padding-top: 32px;">{item.name}</h2>
               </a>
             ))}
           </div>
 
-          <div class="flex justify-center mt-20 py-4 ">
+          <div class={smWrapper}>
             {contactItems.map((item) => (
               <a
                 key={item.id}
                 href={item.link}
                 target="_blank"
                 rel="noreferrer"
-                class="px-6"
+                style="padding-right: 20px; padding-left: 20px;"
               >
                 <img src={item.icon} width={20} height={20} />
               </a>

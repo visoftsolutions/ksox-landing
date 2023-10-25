@@ -8,7 +8,7 @@ import Discord from "/assets/icons/Discord.svg";
 import Telegram from "/assets/icons/Telegram.svg";
 import LinkedIn from "/assets/icons/LinkedIn.svg";
 import XIcon from "/assets/icons/XIcon.svg";
-import { leftSide, navbar, rightSide, wrapper, rightSideMobile, navItem, smWrapper, sm } from "./navbarhome.css";
+import { leftSide, navbar, rightSide, wrapper, rightSideMobile, navItem, smWrapper, sm, mobile, hidden } from "./navbarhome.css";
 
 export default component$(() => {
   const NavItems = [
@@ -62,7 +62,7 @@ export default component$(() => {
   return (
     <div
     class={navbar}
-    style="	box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);"
+    style="box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);"
     >
       <div class={wrapper}>
         <div class={leftSide}>
@@ -73,12 +73,12 @@ export default component$(() => {
 
         <div class={rightSide}>
 
-          <div class="flex">
+          <>
             <a href="/ksox-whitepaper.pdf" target="_blank" rel="noreferrer">
               <h3 class={navItem}>Whitepaper</h3>
             </a>
             <img src={DotIcon} alt="dot" width={5} height={5} />
-          </div>
+          </>
 
           {NavItems.map((item) =>
             item.id <= 4 ? (
@@ -122,10 +122,9 @@ export default component$(() => {
         </div>
       </div>
 
-      <div style={mobileNav.value ? "lg:hidden" : "display: none;"}>
+      <div class={mobileNav.value ? mobile : hidden}>
         <div
-          class="h-screen"
-          style="background: radial-gradient(circle at center bottom, rgb(20, 20, 60) 0%, rgba(40, 100, 255, 0) 60%); top: 0; left: 0; --tw-bg-opacity: 30%;"
+          style="height: 100vh; background: radial-gradient(circle at center bottom, rgb(20, 20, 60) 0%, rgba(40, 100, 255, 0) 60%); top: 0; left: 0; --tw-bg-opacity: 30%;"
         >
           <div style="margin-top: 80px;">
             <a href="/ksox-whitepaper.pdf" target="_blank" rel="noreferrer">
@@ -152,7 +151,7 @@ export default component$(() => {
                   rel="noreferrer"
                   style="padding-right: 20px; padding-left: 20px;"
                 >
-                  <img src={item.icon} width={25} height={25} />
+                  <img src={item.icon} width={20} height={20} />
                 </a>
               ))}
             </div>

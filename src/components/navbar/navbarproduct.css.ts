@@ -9,7 +9,7 @@ export const navbar = style({
 
 export const wrapper = style({
     display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
+    gridTemplateColumns: "repeat(2, 1fr)",
     marginLeft: "auto",
     marginRight: "auto",
     maxWidth: "1400px",
@@ -22,6 +22,7 @@ export const wrapper = style({
         "screen and (min-width: 1124px)": {
           paddingRight: "32px",
           paddingLeft: "32px",
+          gridTemplateColumns: "repeat(3, 1fr)",
         },
       },
 });
@@ -34,43 +35,52 @@ export const headerGrid = style({
     alignItems: "center",
   });
 
-export const leftSide = style([
-headerGrid,
-{
-    gridColumnStart: "1",
-    gridColumnEnd: "3",
-},
-]);
+export const leftSide = style({
+    gridAutoFlow: "column",
+    justifyItems: "left",
+    justifyContent: "left",
+    alignItems: "left",
+});
 
-export const rightSide = style([
-headerGrid,
-{   
+export const center = style([
+    headerGrid,
+    {   
+        display: "none",
+        "@media": {
+            "screen and (min-width: 1124px)": {
+                display: "grid",
+            },
+          },
+    },
+    ]);
+
+export const rightSide = style({
+    justifyItems: "right",
+    justifyContent: "right",
+    alignItems: "center",
+    textAlign: "right",
     display: "none",
-    gridColumnStart: "3",
-    gridColumnEnd: "4",
     "@media": {
         "screen and (min-width: 1124px)": {
             display: "grid",
         },
       },
-},
-]);
+    
+});
 
-export const rightSideMobile = style([
-    headerGrid,
-    {   
-        display: "grid",
-        gridColumnStart: "3",
-        gridColumnEnd: "4",
-        "@media": {
-            "screen and (min-width: 1124px)": {
-                display: "none",
-            },
-          },
-    },
-    ]);
+export const rightSideMobile = style({   
+    display: "grid",
+    justifyItems: "right",
+    justifyContent: "right",
+    alignItems: "center",
+    textAlign: "right",
+    "@media": {
+        "screen and (min-width: 1124px)": {
+            display: "none",
+        },
+        },
+});
   
-//px-5 hover:text-white duration-300
 export const navItem = style({
     paddingRight: "20px",
     paddingLeft: "20px",
@@ -81,4 +91,39 @@ export const navItem = style({
       },
 });
 
-//class="hidden lg:block text-lg border-2 px-3 rounded-full border-blue-700 hover:border-blue-500 duration-300"
+export const mobile = style({
+    display: "grid",
+    "@media": {
+        "screen and (min-width: 1124px)": {
+            display: "none",
+        },
+    },
+});
+
+export const hidden = style({
+    display: "none",
+});
+
+export const smWrapper = style({
+    display: "grid",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    paddingTop: "20px",
+    paddingBottom: "20px",
+    gridAutoFlow: "column",
+    gap: "16px",
+    justifyItems: "center",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: "60px"
+});
+
+export const launchButton = style({
+    borderWidth: "2px",
+    borderRadius: "9999px",
+    borderColor: "#4183E8",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    paddingTop: "5px",
+    paddingBottom: "5px",
+});

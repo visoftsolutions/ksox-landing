@@ -80,6 +80,19 @@ export const navItem = style({
       },
 });
 
+export const mobile = style({
+    display: "grid",
+    "@media": {
+        "screen and (min-width: 1124px)": {
+            display: "none",
+        },
+    },
+});
+
+export const hidden = style({
+    display: "none",
+});
+
 export const smWrapper = style({
     display: "grid",
     paddingLeft: "10px",
