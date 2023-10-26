@@ -3,6 +3,7 @@ import { style } from "@vanilla-extract/css";
 export const infoButton = style({
     color: "#040c18",
     borderWidth: "2px",
+    fontSize: "16px",
     borderRadius: "9999px",
     paddingLeft: "12px",
     paddingRight: "12px",
@@ -14,6 +15,11 @@ export const infoButton = style({
     transitionDuration: "300ms",
     ":hover": {
         backgroundColor: "#ffffff",
+    },
+    "@media": {
+      "screen and (min-width: 824px)": {
+        fontSize: "18px",
+      },
     },
 });
 

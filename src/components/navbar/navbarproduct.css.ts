@@ -120,10 +120,12 @@ export const smWrapper = style({
 
 export const launchButton = style({
     borderWidth: "2px",
+    fontSize: "18px",
     borderRadius: "9999px",
     borderColor: "#4183E8",
     paddingLeft: "10px",
     paddingRight: "10px",
     paddingTop: "5px",
     paddingBottom: "5px",
+    borderStyle: "solid",
 });

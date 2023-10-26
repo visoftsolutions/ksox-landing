@@ -120,11 +120,11 @@ export default component$((props: ModalProps) => {
 
       <div class={mobileNav.value ? mobile : hidden}>
         <div style="text-align: center; margin-top: 60px; margin-bottom: 20px;">
-          <button class={launchButton}>
-            <a href={props.linkToApp} target="_blank" rel="noreferrer">
+          <a href={props.linkToApp} target="_blank" rel="noreferrer">
+            <button class={launchButton}>
               Launch App
-            </a>
-          </button>
+            </button>
+          </a>
         </div>
 
         <div

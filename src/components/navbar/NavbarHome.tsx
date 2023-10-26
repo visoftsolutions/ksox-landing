@@ -149,6 +149,7 @@ export default component$(() => {
                   href={item.link}
                   target="_blank"
                   rel="noreferrer"
+                  style="padding-right: 20px; padding-left: 20px;"
                 >
                   <img src={item.icon} width={20} height={20} />
                 </a>
