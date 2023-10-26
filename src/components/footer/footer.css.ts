@@ -1,43 +1,31 @@
 import { style } from "@vanilla-extract/css";
+import { mediaQuery } from "~/breakpoint.css";
+import { vars } from "~/theme.css";
 
-export const wrapper = style({
-    maxWidth: "1200px",
-    marginLeft: "auto",
-    marginRight: "auto",
-    paddingLeft: "16px",
-    paddingRight: "16px",
-    paddingTop: "120px",
-    "@media": {
-        "screen and (min-width: 824px)": {
-            paddingLeft: "80px",
-            paddingRight: "80px",
-        },
-        "screen and (min-width: 1124px)": {
-            paddingLeft: "40px",
-            paddingRight: "40px",
-          },
-      },
-});
+export const footer = style({
+    display: "grid",
+    gridTemplateRows: "repeat(2, auto)",
+    justifyContent: "stretch",
+    gap: "60px",
+    color: vars.color.text
+})
 
 export const contactBox = style({
-    alignContent: "center",
-    marginLeft: "auto",
-    marginRight: "auto",
     borderWidth: "2px",
-    borderColor: "#4183E8",
+    borderStyle: "solid",
+    borderColor: vars.color.border,
     paddingTop: "48px",
     paddingBottom: "48px",
-    marginBottom: "80px",
     borderRadius: "24px",
-    borderStyle: "solid",
+    textAlign: "center",
 });
 
 export const infoWrapper = style({
     display: "grid",
-    fontSize: "14px",
+    fontSize: "16px",
+    gridTemplateRows: "repeat(3, 1fr)",
     "@media": {
-        "screen and (min-width: 524px)": {
-            fontSize: "16px",
+        [mediaQuery.md]: {
             gridTemplateColumns: "repeat(3, 1fr)",
         },
       },
@@ -47,7 +35,7 @@ export const leftInfo = style({
     paddingBottom: "40px",
     textAlign: "center",
     "@media": {
-        "screen and (min-width: 524px)": {
+        [mediaQuery.md]: {
             paddingRight: "56px",
             textAlign: "left",
             paddingBottom: "0px",
@@ -59,7 +47,7 @@ export const centerInfo = style({
     paddingBottom: "40px",
     textAlign: "center",
     "@media": {
-        "screen and (min-width: 524px)": {
+        [mediaQuery.md]: {
             paddingBottom: "0px",
         },
       },
@@ -69,7 +57,7 @@ export const rightInfo = style({
     paddingBottom: "40px",
     textAlign: "center",
     "@media": {
-        "screen and (min-width: 524px)": {
+        [mediaQuery.md]: {
             paddingLeft: "56px",
             textAlign: "right",
             paddingBottom: "0px",
@@ -80,7 +68,7 @@ export const rightInfo = style({
 export const subTitleText = style({
     paddingBottom: "5px",
     "@media": {
-        "screen and (min-width: 524px)": {
+        [mediaQuery.md]: {
             fontSize: "24px",
         },
       },
@@ -89,7 +77,7 @@ export const subTitleText = style({
 export const titleText = style({
     fontSize: "20px",
     "@media": {
-        "screen and (min-width: 524px)": {
+        [mediaQuery.md]: {
             fontSize: "48px",
         },
       },
