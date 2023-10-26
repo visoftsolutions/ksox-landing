@@ -35,7 +35,7 @@ export default component$((props: ModalProps) => {
           <a href={props.linkToApp} target="_blank" rel="noreferrer">
             <img
               src={props.image}
-              style="border-radius: 1rem; box-shadow: 8px 8px 45px 0px rgba(66, 68, 90, 0.2);"
+              style="border-radius: 1rem; box-shadow: 8px 8px 45px 0px rgba(66, 68, 90, 0.2); aspect-ratio: 16/9;  width: 100%; height: auto;"
               width={700}
               height={400}
             />

@@ -24,10 +24,12 @@ export const contactBox = style({
     marginLeft: "auto",
     marginRight: "auto",
     borderWidth: "2px",
+    borderColor: "#4183E8",
     paddingTop: "48px",
     paddingBottom: "48px",
     marginBottom: "80px",
     borderRadius: "24px",
+    borderStyle: "solid",
 });
 
 export const infoWrapper = style({
@@ -76,7 +78,7 @@ export const rightInfo = style({
 });
 
 export const subTitleText = style({
-    paddingBottom: "20px",
+    paddingBottom: "5px",
     "@media": {
         "screen and (min-width: 524px)": {
             fontSize: "24px",

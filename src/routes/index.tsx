@@ -52,7 +52,7 @@ export default component$(() => {
         </div>
       </div>
 
-      <div class="py-20">
+      <div style="padding-top: 80px; padding-bottom: 80px;">
         <div class={wrapper}>
           <h2 class={titleText}>
             More About KSOX

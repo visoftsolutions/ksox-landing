@@ -126,7 +126,7 @@ export default component$(() => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <h4 class="font-semibold">{item.title}</h4>
+                <h4 style="font-weight: 600; font-size: 16px;">{item.title}</h4>
                 <p style="padding-bottom: 20px;">{item.text}</p>
               </a>
             ))}
@@ -135,7 +135,7 @@ export default component$(() => {
               target="_blank"
               rel="noreferrer"
             >
-              <h4 style="font-weight: 600;">Whitepaper</h4>
+              <h4 style="font-weight: 600; font-size: 16px;">Whitepaper</h4>
               <p style="padding-bottom: 20px;">
                 Documentation about Cryptocurrency Exchange & Payment Processor
               </p>
@@ -151,7 +151,7 @@ export default component$(() => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <h4 style="font-weight: 600;">{item.title}</h4>
+                <h4 style="font-weight: 600; font-size: 16px;">{item.title}</h4>
                 <p style="padding-bottom: 20px;">{item.text}</p>
               </a>
             ))}
@@ -168,7 +168,7 @@ export default component$(() => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <h4 style="font-weight: 600;">{item.title}</h4>
+                <h4 style="font-weight: 600; font-size: 16px;">{item.title}</h4>
                 <p style="padding-bottom: 20px;">{item.text}</p>
               </a>
             ))}

@@ -63,7 +63,7 @@ export default component$((props: ModalProps) => {
       <div class={wrapper}>
         <div class={leftSide}>
           <a href="/">
-            <img src={logoNav} alt="logo" width={120} height={60} />
+            <img src={logoNav} alt="logo" width={110} height={50} />
           </a>
         </div>
 
@@ -137,7 +137,7 @@ export default component$((props: ModalProps) => {
                 href={item.href}
                 onClick$={() => (mobileNav.value = !mobileNav.value)}
               >
-                <h2 style="text-align: center; padding-top: 32px;">{item.name}</h2>
+                <h3 style="text-align: center; padding-top: 32px;">{item.name}</h3>
               </a>
             ))}
           </div>

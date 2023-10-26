@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { heroButton, hero, heroWrapper, contentWrapper, titleText, subText, heroImage, image } from "./hero.css";
+import { heroButton, hero, heroWrapper, contentWrapper, titleText, subText, heroImage} from "./hero.css";
 
 interface ModalProps {
   image: string;
@@ -51,7 +51,7 @@ export default component$((props: ModalProps) => {
             <img
               src={props.image}
               alt="hero image"
-              // class={image}
+              style="aspect-ratio: 1/1;  width: 100%; height: auto;"
               width={480}
               height={480}
             />

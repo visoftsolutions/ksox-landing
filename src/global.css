@@ -2,14 +2,27 @@
  * Tailwind CSS imports
  * View the full documentation at https://tailwindcss.com
  */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 body {
   background-color: #040c18;
   color: #f8f8f8;
   font-family: "Regular";
+  margin: 0px;
+  padding: 0px; 
+  font-size: 16px;
+}
+
+button {
+  color: #f8f8f8;
+  background-color: transparent;
+  font-family: "Regular";
+}
+
+a {
+  color: #f8f8f8;
+  text-decoration: none;
+  font-family: "Light";
+  font-size: 13px;
 }
 
 html {

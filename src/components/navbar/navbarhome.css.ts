@@ -95,10 +95,10 @@ export const hidden = style({
 
 export const smWrapper = style({
     display: "grid",
-    paddingLeft: "10px",
-    paddingRight: "10px",
-    paddingTop: "20px",
-    paddingBottom: "20px",
+    paddingLeft: "20px",
+    paddingRight: "20px",
+    paddingTop: "10px",
+    paddingBottom: "10px",
     gridAutoFlow: "column",
     gap: "16px",
     justifyItems: "center",

@@ -1,6 +1,7 @@
 import { style } from "@vanilla-extract/css";
 
 export const infoButton = style({
+    color: "#040c18",
     borderWidth: "2px",
     borderRadius: "9999px",
     paddingLeft: "12px",
@@ -8,6 +9,7 @@ export const infoButton = style({
     paddingTop: "4px",
     paddingBottom: "4px",
     borderColor: "#4183E8",
+    borderStyle: "solid",
     transition: "background-color",
     transitionDuration: "300ms",
     ":hover": {
@@ -38,6 +40,9 @@ export const box = style({
     paddingRight: "40px",
     borderRadius: "16px",
     borderWidth: "2px",
+    borderStyle: "solid",
+    borderColor: "#D3D3D3",
+    color: "#040c18",
     "@media": {
         "screen and (min-width: 524px)": {
             marginLeft: "40px",

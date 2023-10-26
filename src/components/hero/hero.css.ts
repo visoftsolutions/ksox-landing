@@ -11,6 +11,7 @@ export const hero = style({
 
 export const heroButton = style({
   borderWidth: "2px",
+  borderStyle: "solid",
   paddingTop: "4px",
   paddingBottom: "4px",
   paddingLeft: "10px",
@@ -56,7 +57,7 @@ export const contentWrapper = style({
   "@media": {
     "screen and (min-width: 1124px)": {
       gridTemplateColumns: "repeat(2, 1fr)",
-      alignItems: "center"
+      alignItems: "center",
     },
   },
 });
@@ -116,11 +117,3 @@ export const heroImage = style({
   },
 });
 
-export const image = style({
-  objectFit: "contain",
-  "@media": {
-    "screen and (min-width: 1124px)": {
-      position: "absolute",
-    },
-  },
-});
