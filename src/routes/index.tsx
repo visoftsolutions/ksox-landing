@@ -1,112 +1,102 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import { info, subText, titleText, wrapper } from "./index.css";
 
-import Counter from "~/components/starter/counter/counter";
-import Hero from "~/components/starter/hero/hero";
-import Infobox from "~/components/starter/infobox/infobox";
-import Starter from "~/components/starter/next-steps/next-steps";
+import NavbarHome from "~/components/navbar/NavbarHome";
+import Hero from "~/components/hero/Hero";
+import InfoBox from "~/components/infobox/InfoBox";
+import InfoBox2 from "~/components/infobox/InfoBox2";
+import Footer from "~/components/footer/Footer";
+
+import HeroHome from "/assets/home/HeroHome.svg";
+import PayApp from "/assets/home/PayApp.png";
+import ExchangeApp from "/assets/home/ExchangeApp.png";
+import Server from "/assets/home/Server.svg";
+import Laptop from "/assets/home/Laptop.svg";
+import Receipt from "/assets/home/Receipt.svg";
 
 export default component$(() => {
   return (
-    <>
-      <Hero />
-      <Starter />
+    <div id="home">
+      <NavbarHome />
 
-      <div role="presentation" class="ellipsis"></div>
-      <div role="presentation" class="ellipsis ellipsis-purple"></div>
+      <Hero
+        image={HeroHome}
+        title="Key to a Future Free From Financial Constraints."
+        text="Our mission at KSOX is to design a user-centric ecosystem that democratizes financial control."
+        buttonText1="KSOX Pay"
+        buttonText2="KSOX Exchange"
+        link1="https://pay.ksox.finance/"
+        link2="https://app.ksox.finance/"
+      />
 
-      <div class="container container-center container-spacing-xl">
-        <h3>
-          You can <span class="highlight">count</span>
-          <br /> on me
-        </h3>
-        <Counter />
-      </div>
-
-      <div class="container container-flex">
-        <Infobox>
-          <div q:slot="title" class="icon icon-cli">
-            CLI Commands
-          </div>
-          <>
-            <p>
-              <code>npm run dev</code>
-              <br />
-              Starts the development server and watches for changes
-            </p>
-            <p>
-              <code>npm run preview</code>
-              <br />
-              Creates production build and starts a server to preview it
-            </p>
-            <p>
-              <code>npm run build</code>
-              <br />
-              Creates production build
-            </p>
-            <p>
-              <code>npm run qwik add</code>
-              <br />
-              Runs the qwik CLI to add integrations
-            </p>
-          </>
-        </Infobox>
-
-        <div>
-          <Infobox>
-            <div q:slot="title" class="icon icon-apps">
-              Example Apps
-            </div>
-            <p>
-              Have a look at the <a href="/demo/flower">Flower App</a> or the{" "}
-              <a href="/demo/todolist">Todo App</a>.
-            </p>
-          </Infobox>
-
-          <Infobox>
-            <div q:slot="title" class="icon icon-community">
-              Community
-            </div>
-            <ul>
-              <li>
-                <span>Questions or just want to say hi? </span>
-                <a href="https://qwik.builder.io/chat" target="_blank">
-                  Chat on discord!
-                </a>
-              </li>
-              <li>
-                <span>Follow </span>
-                <a href="https://twitter.com/QwikDev" target="_blank">
-                  @QwikDev
-                </a>
-                <span> on Twitter</span>
-              </li>
-              <li>
-                <span>Open issues and contribute on </span>
-                <a href="https://github.com/BuilderIO/qwik" target="_blank">
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <span>Watch </span>
-                <a href="https://qwik.builder.io/media/" target="_blank">
-                  Presentations, Podcasts, Videos, etc.
-                </a>
-              </li>
-            </ul>
-          </Infobox>
+      <div class={info} id="about">
+        <div class={wrapper}>
+          <h2 class={titleText}>
+            Discover KSOX Products
+          </h2>
+          <InfoBox
+            image={PayApp}
+            title="KSOX Pay"
+            text="A revolutionary payment processor harnessing zk proofs for unparalleled transactional integrity and security."
+            linkToApp="https://pay.ksox.finance/"
+            pathToReadMore="/PaymentProcessor"
+          />
+          <InfoBox
+            image={ExchangeApp}
+            title="KSOX Exchange"
+            text="A cutting-edge order book cryptocurrency exchange using zk proofs for top-notch transactional integrity."
+            linkToApp="https://pay.ksox.finance/"
+            pathToReadMore="/Exchange"
+          />
         </div>
       </div>
-    </>
+
+      <div style="padding-top: 80px; padding-bottom: 80px;">
+        <div class={wrapper}>
+          <h2 class={titleText}>
+            More About KSOX
+          </h2>
+          <p class={subText}>
+            Our mission at KSOX is to design a user-centric ecosystem that
+            democratizes financial control, retaining its simplicity and
+            decentralized character. Step into the future of finance with KSOX
+            today and embrace a world where financial freedom is not just a
+            dream, but a reality!
+          </p>
+
+          <InfoBox2
+            rightSide={false}
+            image={Server}
+            title="Is it Safe?"
+            text="Surely you're asking yourself, why should you trust us? The answer is simple - you don't have to. With KSOX, trust takes on a new dimension. Leveraging zk-STARK technology, we ensure that all crypto assets are securely stored in a smart contract, inaccessible to anyone but you. Only requests authenticated by users get processed – we simply cannot act on your behalf."
+          />
+          <InfoBox2
+            rightSide={true}
+            image={Laptop}
+            title="What does KSOX offer?"
+            text="Ever envisioned a world where contactless payments are the norm? KSOX brings this reality closer to you with its state-of-the-art NFC payment capabilities. Now you can handle transactions as simply as if using a conventional card. Imagine stepping into your favorite bar or cafe, paying with cryptocurrency effortlessly, and not having to worry about your bank's solvency ever again!"
+          />
+          <InfoBox2
+            rightSide={false}
+            image={Receipt}
+            title="Other features"
+            text="But the innovation doesn't stop there. KSOX's unique feature allows you to generate temporary 6-digit codes for smooth and easy fund transfers. This feature, well-established in online payments, paves the way for a seamless integration of cryptocurrency into your online transactions, bringing elegance and simplicity together."
+          />
+        </div>
+      </div>
+
+      <Footer />
+    </div>
   );
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: "KSOX",
   meta: [
     {
       name: "description",
-      content: "Qwik site description",
+      content: "KSOX - Your key to a future free from financial constraints.",
     },
   ],
 };
