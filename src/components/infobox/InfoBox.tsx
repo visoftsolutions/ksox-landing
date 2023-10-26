@@ -35,7 +35,7 @@ export default component$((props: ModalProps) => {
           <a href={props.linkToApp} target="_blank" rel="noreferrer">
             <img
               src={props.image}
-              style="filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)); border-radius: 1rem;"
+              style="border-radius: 1rem; box-shadow: 8px 8px 45px 0px rgba(66, 68, 90, 0.2);"
               width={700}
               height={400}
             />

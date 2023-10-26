@@ -51,7 +51,7 @@ export default component$((props: ModalProps) => {
             <img
               src={props.image}
               alt="hero image"
-              class={image}
+              // class={image}
               width={480}
               height={480}
             />
