@@ -1,10 +1,26 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import { info, subText, titleText, wrapper } from "./index.css";
+import Hero from "~/components/hero";
+import { container } from "./layout.css";
+import { info } from "./index.css";
+import Products from "~/components/products";
+import Technology from "~/components/technology";
 
 export default component$(() => {
   return (
-    <div></div>
+    <>
+      <div class={container}>
+        <Hero />
+      </div>
+
+      <div class={[container, info]} id="about">
+        <Products />
+      </div>
+
+      <div class={container} id="about">
+        <Technology />
+      </div>
+    </>
   );
 });
 

@@ -6,6 +6,8 @@ export const [mainTheme, vars] = createTheme({
     backgroundHighlight: "#1f1f1f",
     backgroundBlue: "#040c18",
     text: "#f8f8f8",
+    textDark: "#1f1f1f",
+    textHighlight: "#ffffff",
     border: "#4183E8",
     shadow: "#000000",
   },
