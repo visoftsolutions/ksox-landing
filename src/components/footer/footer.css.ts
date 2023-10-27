@@ -1,111 +1,89 @@
-import { style } from "@vanilla-extract/css";
+import { type ComplexStyleRule, style } from "@vanilla-extract/css";
+import { mediaQuery } from "~/breakpoint.css";
+import { vars } from "~/theme.css";
 
-export const wrapper = style({
-    maxWidth: "1200px",
-    marginLeft: "auto",
-    marginRight: "auto",
-    paddingLeft: "16px",
-    paddingRight: "16px",
-    paddingTop: "120px",
-    "@media": {
-        "screen and (min-width: 824px)": {
-            paddingLeft: "80px",
-            paddingRight: "80px",
-        },
-        "screen and (min-width: 1124px)": {
-            paddingLeft: "40px",
-            paddingRight: "40px",
-          },
-      },
+export const footer = style({
+  display: "grid",
+  gridTemplateRows: "repeat(2, auto)",
+  justifyContent: "stretch",
+  gap: "60px",
+  color: vars.color.text,
 });
 
 export const contactBox = style({
-    alignContent: "center",
-    marginLeft: "auto",
-    marginRight: "auto",
-    borderWidth: "2px",
-    borderColor: "#4183E8",
-    paddingTop: "48px",
-    paddingBottom: "48px",
-    marginBottom: "80px",
-    borderRadius: "24px",
-    borderStyle: "solid",
-});
-
-export const infoWrapper = style({
-    display: "grid",
-    fontSize: "14px",
-    "@media": {
-        "screen and (min-width: 524px)": {
-            fontSize: "16px",
-            gridTemplateColumns: "repeat(3, 1fr)",
-        },
-      },
-});
-
-export const leftInfo = style({
-    paddingBottom: "40px",
-    textAlign: "center",
-    "@media": {
-        "screen and (min-width: 524px)": {
-            paddingRight: "56px",
-            textAlign: "left",
-            paddingBottom: "0px",
-        },
-      },
-});
-
-export const centerInfo = style({
-    paddingBottom: "40px",
-    textAlign: "center",
-    "@media": {
-        "screen and (min-width: 524px)": {
-            paddingBottom: "0px",
-        },
-      },
-});
-
-export const rightInfo = style({
-    paddingBottom: "40px",
-    textAlign: "center",
-    "@media": {
-        "screen and (min-width: 524px)": {
-            paddingLeft: "56px",
-            textAlign: "right",
-            paddingBottom: "0px",
-        },
-      },
-});
-
-export const subTitleText = style({
-    paddingBottom: "5px",
-    "@media": {
-        "screen and (min-width: 524px)": {
-            fontSize: "24px",
-        },
-      },
-});
-
-export const titleText = style({
-    fontSize: "20px",
-    "@media": {
-        "screen and (min-width: 524px)": {
-            fontSize: "48px",
-        },
-      },
+  display: "grid",
+  gridAutoFlow: "row",
+  gap: "10px",
+  borderWidth: "2px",
+  borderStyle: "solid",
+  borderColor: vars.color.border,
+  paddingTop: "48px",
+  paddingBottom: "48px",
+  borderRadius: "24px",
+  textAlign: "center",
 });
 
 export const iconsBox = style({
-    display: "grid",
-    paddingTop: "20px",
-    gridAutoFlow: "column",
-    gap: "50px",
-    justifyItems: "center",
-    justifyContent: "center",
-    alignItems: "center",
-    "@media": {
-        "screen and (min-width: 524px)": {
-            paddingTop: "56px",
-        },
-      },
+  display: "grid",
+  gap: "50px",
+  gridAutoFlow: "column",
+  justifyItems: "center",
+  justifyContent: "center",
+  alignItems: "center",
+});
+
+export const infoBox = style({
+  display: "grid",
+  fontSize: "16px",
+  gridTemplateRows: "repeat(2, 1fr)",
+  gridTemplateColumns: "1fr",
+  "@media": {
+    [mediaQuery.md]: {
+      gridTemplateColumns: "repeat(2, 1fr)",
+      gridTemplateRows: "1fr",
+    },
+  },
+});
+
+const sideInfo: ComplexStyleRule = {
+  display: "grid",
+  gridAutoFlow: "row",
+  gap: "20px",
+  textAlign: "center",
+  "@media": {
+    [mediaQuery.md]: {
+      textAlign: "left",
+    },
+  },
+};
+
+export const leftInfo = style([sideInfo]);
+export const rightInfo = style([sideInfo]);
+
+export const titleText = style({
+  fontSize: "24px",
+  fontWeight: "bold",
+  "@media": {
+    [mediaQuery.md]: {
+      fontSize: "48px",
+    },
+  },
+});
+
+export const subTitleText = style({
+  fontSize: "24px",
+  fontWeight: "bold",
+});
+
+export const footerTile = style({
+  display: "grid",
+  gridAutoFlow: "row",
+  gap: "8px",
+});
+
+export const footerTileTitle = style([subTitleText]);
+
+export const footerTileSubtitle = style({
+  fontSize: "12px",
+  fontWeight: "normal",
 });

@@ -1,101 +1,84 @@
-import { style } from "@vanilla-extract/css";
-
-export const infoButton = style({
-    color: "#040c18",
-    borderWidth: "2px",
-    fontSize: "16px",
-    borderRadius: "9999px",
-    paddingLeft: "12px",
-    paddingRight: "12px",
-    paddingTop: "4px",
-    paddingBottom: "4px",
-    borderColor: "#4183E8",
-    borderStyle: "solid",
-    transition: "background-color",
-    transitionDuration: "300ms",
-    ":hover": {
-        backgroundColor: "#ffffff",
-    },
-    "@media": {
-      "screen and (min-width: 824px)": {
-        fontSize: "18px",
-      },
-    },
-});
-
-export const productImage = style({
-    borderRadius: "16px",
-    transitionDuration: "500ms",
-    paddingTop: "40px",
-    ":hover": {
-        transform: "skewX(-1deg)",
-    },
-    "@media": {
-        "screen and (min-width: 1124px)": {
-            paddingTop: "0px",
-        },
-      },
-});
+import { ComplexStyleRule, style } from "@vanilla-extract/css";
+import { mediaQuery } from "~/breakpoint.css";
 
 export const box = style({
-    paddingBottom: "64px",
-    paddingTop: "64px",
-    marginBottom: "80px",
-    marginTop: "80px",
-    paddingLeft: "40px",
-    paddingRight: "40px",
-    borderRadius: "16px",
-    borderWidth: "2px",
-    borderStyle: "solid",
-    borderColor: "#D3D3D3",
-    color: "#040c18",
-    "@media": {
-        "screen and (min-width: 524px)": {
-            marginLeft: "40px",
-            marginRight: "40px",
-        },
-      },
+  paddingBottom: "20px",
+  paddingTop: "20px",
+  paddingLeft: "10px",
+  paddingRight: "10px",
+  display: "grid",
+  alignItems: "center",
+  "@media": {
+    [mediaQuery.xl]: {
+      gridTemplateColumns: "repeat(2, 1fr)",
+    },
+  },
 });
 
-export const wrapper = style({
-    display: "grid",
-    alignItems: "center",
-    "@media": {
-        "screen and (min-width: 1124px)": {
-            gridTemplateColumns: "repeat(2, 1fr)",
-        },
-      },
+export const imageLeft = style({
+  display: "none",
+  "@media": {
+    "screen and (min-width: 824px)": {
+      display: "block",
+      justifySelf: "start",
+    },
+  },
 });
 
-export const textBox = style({
+export const imageRight = style({
+  display: "none",
+  "@media": {
+    "screen and (min-width: 824px)": {
+      display: "block",
+      justifySelf: "end",
+    },
+  },
+});
+
+const textBox: ComplexStyleRule = {
+  display: "grid",
+  gap: "10px",
+  textAlign: "center",
+};
+
+export const textBoxLeft = style([
+  textBox,
+  {
+    "@media": {
+      [mediaQuery.xl]: {
+        textAlign: "left",
+      },
+    },
+  },
+]);
+
+export const textBoxRight = style([
+  textBox,
+  {
     textAlign: "center",
     "@media": {
-        "screen and (min-width: 1124px)": {
-           textAlign: "left",
-           paddingRight: "40px",
-        },
+      [mediaQuery.xl]: {
+        textAlign: "right",
       },
-});
+    },
+  },
+]);
 
 export const titleText = style({
-    fontSize: "20px",
-    "@media": {
-      "screen and (min-width: 524px)": {
-        fontSize: "24px",
-      },
-      "screen and (min-width: 824px)": {
-        fontSize: "30px",
-      },
+  fontSize: "20px",
+  fontWeight: "bold",
+  "@media": {
+    [mediaQuery.xl]: {
+      fontSize: "30px",
     },
-  });
-  
+  },
+});
+
 export const subText = style({
-    paddingBottom: "20px",
-    paddingTop: "20px",
-    "@media": {
-      "screen and (min-width: 524px)": {
-        paddingBottom: "40px",
-        paddingTop: "40px",
-      }
+  fontSize: "14px",
+  "@media": {
+    [mediaQuery.md]: {
+      fontSize: "18px",
     },
-  });
+  },
+});

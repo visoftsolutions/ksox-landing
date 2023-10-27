@@ -1,52 +1,46 @@
 /**
- * Tailwind CSS imports
- * View the full documentation at https://tailwindcss.com
+ * WHAT IS THIS FILE?
+ *
+ * Globally applied styles. No matter which components are in the page or matching route,
+ * the styles in here will be applied to the Document, without any sort of CSS scoping.
+ *
  */
+html {
+  line-height: 1;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
 
+html,
 body {
-  background-color: #040c18;
-  color: #f8f8f8;
-  font-family: "Regular";
-  margin: 0px;
-  padding: 0px; 
-  font-size: 16px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 button {
-  color: #f8f8f8;
   background-color: transparent;
   font-family: "Regular";
 }
 
 a {
-  color: #f8f8f8;
+  color: inherit;
   text-decoration: none;
-  font-family: "Light";
-  font-size: 13px;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-h1 {
-  font-family: "Bold";
-}
-
-p {
-  font-family: "Light";
-}
-
-@font-face {
-  font-family: "Bold";
-  src: url("/fonts/Sansation_Bold.ttf");
-}
-
-@font-face {
-  font-family: "Regular";
-  src: url("/fonts/Sansation_Regular.ttf");
-}
-@font-face {
-  font-family: "Light";
-  src: url("/fonts/Sansation_Light.ttf");
 }
