@@ -1,4 +1,4 @@
-import { ComplexStyleRule, style } from "@vanilla-extract/css";
+import { type ComplexStyleRule, style } from "@vanilla-extract/css";
 import { mediaQuery } from "~/breakpoint.css";
 
 export const box = style({
