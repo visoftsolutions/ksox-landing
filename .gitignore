@@ -6,6 +6,7 @@
 
 # Development
 node_modules
+tmp
 *.local
 
 # Cache
@@ -24,7 +25,9 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Editor
-.vscode/
+.vscode/*
+!.vscode/launch.json
+!.vscode/*.code-snippets
 
 .idea
 .DS_Store
@@ -37,3 +40,7 @@ lerna-debug.log*
 # Yarn
 .yarn/*
 !.yarn/releases
+
+# Envs
+.env
+*.env

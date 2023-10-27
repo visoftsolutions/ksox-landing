@@ -1,0 +1,9 @@
+services:
+  ksox-landing:
+    container_name: ksox-landing
+    hostname: ksox-landing
+    build:
+      context: ./
+      dockerfile: ./ksox-landing.dockerfile
+    ports:
+      - 0.0.0.0:3000:80
