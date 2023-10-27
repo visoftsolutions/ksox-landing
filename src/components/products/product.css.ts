@@ -47,6 +47,9 @@ export const productImage = style({
 });
 
 export const textBox = style({
+  display: "grid",
+  gap: "10px",
+  gridAutoFlow: "row",
 });
 
 export const titleText = style({

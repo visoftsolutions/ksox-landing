@@ -7,7 +7,6 @@ export const mainContainer = style([
     display: "grid",
     gridAutoFlow: "row",
     gap: "50px",
-    paddingTop: "100px",
     paddingBottom: "100px",
     color: vars.color.text,
   },
