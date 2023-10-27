@@ -4,6 +4,7 @@ import { vars } from "~/theme.css";
 
 export const product = style({
   display: "grid",
+  gap: "20px",
   alignItems: "center",
   paddingBottom: "64px",
   paddingTop: "64px",
@@ -46,7 +47,6 @@ export const productImage = style({
 });
 
 export const textBox = style({
-  textAlign: "center",
 });
 
 export const titleText = style({

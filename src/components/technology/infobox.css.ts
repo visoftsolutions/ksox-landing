@@ -1,4 +1,5 @@
 import { style } from "@vanilla-extract/css";
+import { mediaQuery } from "~/breakpoint.css";
 
 export const imageLeft = style({
   display: "none",
@@ -31,7 +32,7 @@ export const wrapper = style({
   display: "grid",
   alignItems: "center",
   "@media": {
-    "screen and (min-width: 824px)": {
+    [mediaQuery.xl]: {
       gridTemplateColumns: "repeat(2, 1fr)",
     },
   },
@@ -40,7 +41,7 @@ export const wrapper = style({
 export const textBoxLeft = style({
   textAlign: "center",
   "@media": {
-    "screen and (min-width: 824px)": {
+    [mediaQuery.xl]: {
       textAlign: "left",
     },
   },
@@ -49,9 +50,8 @@ export const textBoxLeft = style({
 export const textBoxRight = style({
   textAlign: "center",
   "@media": {
-    "screen and (min-width: 824px)": {
+    [mediaQuery.xl]: {
       textAlign: "right",
-      paddingRight: "40px",
     },
   },
 });
@@ -59,10 +59,10 @@ export const textBoxRight = style({
 export const titleText = style({
   fontSize: "20px",
   "@media": {
-    "screen and (min-width: 524px)": {
+    [mediaQuery.md]: {
       fontSize: "24px",
     },
-    "screen and (min-width: 824px)": {
+    [mediaQuery.xl]: {
       fontSize: "30px",
     },
   },
@@ -71,7 +71,7 @@ export const titleText = style({
 export const subText = style({
   fontSize: "14px",
   "@media": {
-    "screen and (min-width: 524px)": {
+    [mediaQuery.md]: {
       fontSize: "18px",
     },
   },

@@ -1,4 +1,5 @@
 import { style } from "@vanilla-extract/css";
+import { mediaQuery } from "~/breakpoint.css";
 
 export const technology = style({
   display: "grid",
@@ -10,7 +11,7 @@ export const technology = style({
 export const titleText = style({
   fontSize: "24px",
   "@media": {
-    "screen and (min-width: 524px)": {
+    [mediaQuery.md]: {
       fontSize: "36px",
     },
   },

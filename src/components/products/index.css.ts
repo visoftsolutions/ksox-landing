@@ -2,8 +2,8 @@ import { style } from "@vanilla-extract/css";
 import { mediaQuery } from "~/breakpoint.css";
 
 export const products = style({
-  paddingTop: "20px",
-  paddingBottom: "20px",
+  paddingTop: "100px",
+  paddingBottom: "100px",
   display: "grid",
   gridAutoFlow: "row",
   alignItems: "center",

@@ -8,7 +8,7 @@ import ExchangeApp from "~/media/home/ExchangeApp.png";
 export default component$(() => {
   return (
     <div class={products}>
-      <h2 class={titleText}>Discover KSOX Products</h2>
+      <div class={titleText}>Discover KSOX Products</div>
       <Product
         image={PayApp}
         title="KSOX Pay"

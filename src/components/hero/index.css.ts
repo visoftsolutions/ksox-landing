@@ -38,14 +38,10 @@ export const titleText = style({
 });
 
 export const subText = style({
-  fontSize: "14px",
-  paddingTop: "40px",
-  paddingBottom: "40px",
+  fontSize: "20px",
   "@media": {
     [mediaQuery.md]: {
-      fontSize: "18px",
-      paddingTop: "80px",
-      paddingBottom: "80px",
+      fontSize: "24px",
     },
   },
 });
