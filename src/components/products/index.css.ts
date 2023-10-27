@@ -2,13 +2,10 @@ import { style } from "@vanilla-extract/css";
 import { mediaQuery } from "~/breakpoint.css";
 
 export const products = style({
-  paddingTop: "100px",
-  paddingBottom: "100px",
   display: "grid",
-  gridAutoFlow: "row",
-  alignItems: "center",
   justifyContent: "center",
-  gap: "100px",
+  alignItems: "center",
+  gap: "50px",
 });
 
 export const titleText = style({
@@ -21,10 +18,11 @@ export const titleText = style({
 });
 
 export const subText = style({
-  paddingTop: "20px",
-  "@media": {
-    [mediaQuery.md]: {
-      fontSize: "18px",
-    },
-  },
+  fontSize: "18px",
+});
+
+export const infobox = style({
+  display: "grid",
+  gridAutoFlow: "row",
+  gap: "50px",
 });

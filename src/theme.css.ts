@@ -2,8 +2,7 @@ import { createTheme, style } from "@vanilla-extract/css";
 
 export const [mainTheme, vars] = createTheme({
   color: {
-    backgroundWhite: "#f8f8f8",
-    backgroundHighlight: "#040c18",
+    backgroundHighlight: "#092148",
     backgroundBlue: "#040c18",
     text: "#f8f8f8",
     textDark: "#040c18",

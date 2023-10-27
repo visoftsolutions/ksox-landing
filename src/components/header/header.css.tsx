@@ -14,7 +14,7 @@ export const header = style([
     right: "0px",
     padding: "20px",
     display: "grid",
-    boxShadow: "8px 8px 44px 0px rgba(0, 0, 0, 0.2)",
+    boxShadow: "8px 8px 44px 0px rgba(0, 0, 0, 0.6)",
   },
 ]);
 

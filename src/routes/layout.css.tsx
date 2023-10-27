@@ -15,7 +15,7 @@ export const mainContainer = style([
 export const main = style({
   display: "grid",
   gridAutoFlow: "row",
-  gap: "50px",
+  gap: "0px",
 });
 
 export const container = style({

@@ -20,3 +20,9 @@ export const titleText = style({
 export const subText = style({
   fontSize: "18px",
 });
+
+export const infobox = style({
+  display: "grid",
+  gridAutoFlow: "row",
+  gap: "50px",
+});

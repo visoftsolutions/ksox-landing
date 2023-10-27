@@ -5,6 +5,8 @@ import { container } from "./layout.css";
 import { info } from "./index.css";
 import Products from "~/components/products";
 import Technology from "~/components/technology";
+import Wave1 from "~/media/wave/wave1.svg?jsx";
+import Wave2 from "~/media/wave/wave2.svg?jsx";
 
 export default component$(() => {
   return (
@@ -13,12 +15,18 @@ export default component$(() => {
         <Hero />
       </div>
 
-      <div class={[container, info]} id="about">
-        <Products />
+      <div class={info}>
+        <Wave1 />
+        <div class={container} id="products">
+          <Products />
+        </div>
       </div>
 
-      <div class={container} id="about">
-        <Technology />
+      <div>
+        <Wave2 />
+        <div class={container} id="technology">
+          <Technology />
+        </div>
       </div>
     </>
   );
