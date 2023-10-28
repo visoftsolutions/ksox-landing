@@ -7,41 +7,42 @@ export const hero = style({
   alignItems: "center",
   height: "100vh",
   gridTemplateColumns: "1fr",
-  gridTemplateRows: "1fr 1fr",
+  gridTemplateRows: "1fr",
+});
+
+export const heroBox = style({
+  display: "grid",
+  justifyContent: "center",
+  justifyItems: "center",
+  alignItems: "center",
+  gap: "20px",
+  gridTemplateColumns: "auto",
+  gridTemplateRows: "auto auto",
   "@media": {
     [mediaQuery.xl]: {
-      textAlign: "left",
-      gridTemplateRows: "1fr",
-      gridTemplateColumns: "1fr 1fr",
+      gridTemplateColumns: "auto auto",
+      gridTemplateRows: "auto",
     },
   },
 });
 
-export const heroContent = style({});
+export const heroContentBox = style({
+  alignSelf: "center",
+});
 
-export const heroImage = style({});
+export const heroImage = style({
+  "@media": {
+    [mediaQuery.xl]: {
+      width: "480px",
+      height: "480px",
+    },
+  },
+});
 
 export const titleText = style({
   fontSize: "24px",
-  "@media": {
-    [mediaQuery.md]: {
-      fontSize: "40px",
-      paddingRight: "32px",
-      paddingLeft: "32px",
-    },
-    [mediaQuery.xl]: {
-      fontSize: "56px",
-      paddingRight: "0px",
-      paddingLeft: "0px",
-    },
-  },
 });
 
 export const subText = style({
   fontSize: "20px",
-  "@media": {
-    [mediaQuery.md]: {
-      fontSize: "24px",
-    },
-  },
 });

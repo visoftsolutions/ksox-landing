@@ -18,7 +18,7 @@ export const box = style({
 export const imageLeft = style({
   display: "none",
   "@media": {
-    "screen and (min-width: 824px)": {
+    [mediaQuery.xl]: {
       display: "block",
       justifySelf: "start",
     },
@@ -28,7 +28,7 @@ export const imageLeft = style({
 export const imageRight = style({
   display: "none",
   "@media": {
-    "screen and (min-width: 824px)": {
+    [mediaQuery.xl]: {
       display: "block",
       justifySelf: "end",
     },
