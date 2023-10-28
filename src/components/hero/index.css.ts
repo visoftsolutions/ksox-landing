@@ -32,7 +32,7 @@ export const heroContentBox = style({
 
 export const heroImage = style({
   "@media": {
-    [mediaQuery.xl]: {
+    [mediaQuery.md]: {
       width: "480px",
       height: "480px",
     },

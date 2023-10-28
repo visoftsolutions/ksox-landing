@@ -25,11 +25,19 @@ export const contactBox = style({
 
 export const iconsBox = style({
   display: "grid",
-  gap: "50px",
+  gap: "20px",
   gridAutoFlow: "column",
   justifyItems: "center",
   justifyContent: "center",
   alignItems: "center",
+  paddingLeft: "20px",
+  paddingRight: "20px",
+
+  "@media": {
+    [mediaQuery.md]: {
+      gap: "50px",
+    }
+  }
 });
 
 export const infoBox = style({

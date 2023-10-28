@@ -2,10 +2,6 @@ import { type ComplexStyleRule, style } from "@vanilla-extract/css";
 import { mediaQuery } from "~/breakpoint.css";
 
 export const box = style({
-  paddingBottom: "20px",
-  paddingTop: "20px",
-  paddingLeft: "10px",
-  paddingRight: "10px",
   display: "grid",
   alignItems: "center",
   "@media": {
@@ -65,13 +61,8 @@ export const textBoxRight = style([
 ]);
 
 export const titleText = style({
-  fontSize: "20px",
+  fontSize: "30px",
   fontWeight: "bold",
-  "@media": {
-    [mediaQuery.xl]: {
-      fontSize: "30px",
-    },
-  },
 });
 
 export const subText = style({});

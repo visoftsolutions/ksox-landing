@@ -9,10 +9,11 @@ export const technology = style({
 });
 
 export const titleText = style({
-  fontSize: "24px",
+  fontSize: "30px",
+  textAlign: "center",
   "@media": {
     [mediaQuery.md]: {
-      fontSize: "36px",
+      textAlign: "left",
     },
   },
 });

@@ -12,9 +12,10 @@ export const header = style([
     top: "0px",
     left: "0px",
     right: "0px",
-    padding: "20px",
     display: "grid",
     boxShadow: "8px 8px 44px 0px rgba(0, 0, 0, 0.6)",
+    paddingTop: "20px",
+    paddingBottom: "20px",
   },
 ]);
 
@@ -46,22 +47,28 @@ export const leftSide = style([
 export const rightSide = style([
   headerGrid,
   {
-    display: "none",
     gridColumnStart: "2",
     gridColumnEnd: "3",
-    "@media": {
-      [mediaQuery.xl]: {
-        display: "grid",
-      },
-    },
+    display: "grid",
+    gridAutoFlow: "column",
+    gap: "10px",
   },
 ]);
 
 export const box = style({
   display: "grid",
   gridAutoFlow: "column",
-  gap: "5px",
+  gap: "10px",
   justifyContent: "center",
   alignItems: "center",
   justifyItems: "center",
 });
+
+export const boxText = style({
+  display: "none",
+  "@media": {
+    [mediaQuery.md]: {
+      display: "block"
+    }
+  }
+})

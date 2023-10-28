@@ -25,7 +25,8 @@ export const container = style({
   alignContent: "center",
   alignItems: "center",
   gridTemplateColumns: "minmax(0px, 1200px)",
-  padding: "40px",
+  paddingLeft: "40px",
+  paddingRight: "40px",
   "@media": {
     [mediaQuery.xl]: {
       padding: "0px",
