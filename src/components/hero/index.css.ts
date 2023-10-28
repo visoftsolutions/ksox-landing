@@ -5,7 +5,8 @@ export const hero = style({
   display: "grid",
   justifyContent: "center",
   alignItems: "center",
-  height: "100vh",
+  paddingTop: "82px",
+  minHeight: "calc(100vh - 82px)",
   gridTemplateColumns: "1fr",
   gridTemplateRows: "1fr",
 });

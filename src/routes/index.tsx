@@ -37,7 +37,19 @@ export const head: DocumentHead = {
   meta: [
     {
       name: "description",
-      content: "KSOX - Your key to a future free from financial constraints.",
+      content: "Exchange, Transfer, build Crypto Business",
+    },
+    {
+      name: "theme-color",
+      content: "#040c18",
+    },
+    {
+      name: "apple-mobile-web-app-status-bar-style",
+      content: "black-translucent",
+    },
+    {
+      name: "apple-mobile-web-app-capable",
+      content: "yes",
     },
   ],
 };

@@ -36,8 +36,8 @@ export const iconsBox = style({
   "@media": {
     [mediaQuery.md]: {
       gap: "50px",
-    }
-  }
+    },
+  },
 });
 
 export const infoBox = style({

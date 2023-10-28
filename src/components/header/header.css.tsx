@@ -68,7 +68,7 @@ export const boxText = style({
   display: "none",
   "@media": {
     [mediaQuery.md]: {
-      display: "block"
-    }
-  }
-})
+      display: "block",
+    },
+  },
+});

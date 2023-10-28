@@ -1,7 +1,14 @@
 import { component$ } from "@builder.io/qwik";
 
 import LogoSvg from "~/media/logo.svg";
-import { box, boxText, header, leftSide, rightSide, wrapper } from "./header.css";
+import {
+  box,
+  boxText,
+  header,
+  leftSide,
+  rightSide,
+  wrapper,
+} from "./header.css";
 import { navItem } from "./nav.css";
 import DotSvg from "~/media/icons/dot.svg";
 import SolutionsSvg from "~/media/icons/solutions.svg";
