@@ -15,11 +15,10 @@ export default component$(() => {
       <div class={heroBox}>
         <div class={heroContentBox}>
           <h1 class={titleText}>
-            Key to a Future Free From Financial Constraints
+            The Ultimate Nexus of Exchange, Transfer, and Business Solutions
           </h1>
           <p class={subText}>
-            Our mission at KSOX is to design a user-centric ecosystem that
-            democratizes financial control
+            Exchange, Transfer, build Crypto Business with us!
           </p>
         </div>
         <img

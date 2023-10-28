@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { infobox, subText, technology, titleText } from "./index.css";
+import { infobox, technology, titleText } from "./index.css";
 
 import ServerSvg from "~/media/home/server.svg";
 import LaptopSvg from "~/media/home/laptop.svg";
@@ -11,13 +11,6 @@ export default component$(() => {
   return (
     <div class={technology}>
       <h2 class={titleText}>More About KSOX</h2>
-      <p class={subText}>
-        Our mission at KSOX is to design a user-centric ecosystem that
-        democratizes financial control, retaining its simplicity and
-        decentralized character. Step into the future of finance with KSOX today
-        and embrace a world where financial freedom is not just a dream, but a
-        reality!
-      </p>
       <div class={infobox}>
         <InfoboxLeft>
           <div q:slot="title">Is it Safe?</div>

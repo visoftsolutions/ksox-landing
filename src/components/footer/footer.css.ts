@@ -35,6 +35,7 @@ export const iconsBox = style({
 export const infoBox = style({
   display: "grid",
   fontSize: "16px",
+  gap: "24px",
   gridTemplateRows: "repeat(2, 1fr)",
   gridTemplateColumns: "1fr",
   "@media": {
@@ -81,7 +82,10 @@ export const footerTile = style({
   gap: "8px",
 });
 
-export const footerTileTitle = style([subTitleText]);
+export const footerTileTitle = style({
+  fontSize: "20px",
+  fontWeight: "normal",
+});
 
 export const footerTileSubtitle = style({
   fontSize: "12px",

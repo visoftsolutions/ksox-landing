@@ -11,23 +11,23 @@ import Wave2 from "~/media/wave/wave2.svg?jsx";
 export default component$(() => {
   return (
     <>
-      <div class={container}>
+      <section id="landing-page" class={container}>
         <Hero />
-      </div>
+      </section>
 
-      <div class={info}>
+      <section id="ksox-solutions" class={info}>
         <Wave1 />
-        <div class={container} id="products">
+        <div class={container}>
           <Products />
         </div>
-      </div>
+      </section>
 
-      <div>
+      <section id="technology">
         <Wave2 />
-        <div class={container} id="technology">
+        <div class={container}>
           <Technology />
         </div>
-      </div>
+      </section>
     </>
   );
 });

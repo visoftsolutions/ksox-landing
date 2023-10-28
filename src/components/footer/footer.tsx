@@ -13,10 +13,10 @@ import {
   titleText,
 } from "./footer.css";
 
-import DiscordSvg from "~/media/icons/discord.svg?jsx";
-import TelegramSvg from "~/media/icons/telegram.svg?jsx";
-import LinkedInSvg from "~/media/icons/linkedIn.svg?jsx";
-import XSvg from "~/media/icons/x.svg?jsx";
+import DiscordSvg from "~/media/icons/discord.svg";
+import TelegramSvg from "~/media/icons/telegram.svg";
+import LinkedInSvg from "~/media/icons/linkedIn.svg";
+import XSvg from "~/media/icons/x.svg";
 
 export default component$(() => {
   return (
@@ -30,28 +30,28 @@ export default component$(() => {
             target="_blank"
             rel="noreferrer"
           >
-            <DiscordSvg />
+            <img src={DiscordSvg} width={30} height={30} />
           </a>
           <a
             href={"https://t.me/ksox_community"}
             target="_blank"
             rel="noreferrer"
           >
-            <TelegramSvg />
+            <img src={TelegramSvg} width={30} height={30} />
           </a>
           <a
             href={"https://www.linkedin.com/company/ksox"}
             target="_blank"
             rel="noreferrer"
           >
-            <LinkedInSvg />
+            <img src={LinkedInSvg} width={30} height={30} />
           </a>
           <a
             href={"https://twitter.com/KsoxExchange"}
             target="_blank"
             rel="noreferrer"
           >
-            <XSvg />
+            <img src={XSvg} width={30} height={30} />
           </a>
         </div>
       </div>

@@ -40,7 +40,8 @@ export const heroImage = style({
 });
 
 export const titleText = style({
-  fontSize: "24px",
+  fontSize: "28px",
+  fontWeight: "bold",
 });
 
 export const subText = style({

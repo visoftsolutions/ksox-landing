@@ -56,3 +56,12 @@ export const rightSide = style([
     },
   },
 ]);
+
+export const box = style({
+  display: "grid",
+  gridAutoFlow: "column",
+  gap: "5px",
+  justifyContent: "center",
+  alignItems: "center",
+  justifyItems: "center",
+});

@@ -1,49 +1,114 @@
 import { component$ } from "@builder.io/qwik";
-import { infobox, products, subText, titleText } from "./index.css";
+import {
+  description,
+  descriptionBox,
+  descriptionText,
+  descriptionTitle,
+  products,
+} from "./index.css";
 import InfoboxLeft from "../infobox/infoboxLeft";
 import InfoboxRight from "../infobox/infoboxRight";
 
 export default component$(() => {
   return (
     <div class={products}>
-      <h2 class={titleText}>Ksox Products</h2>
-      <p class={subText}>
-        Our mission at KSOX is to design a user-centric ecosystem that
-        democratizes financial control, retaining its simplicity and
-        decentralized character. Step into the future of finance with KSOX today
-        and embrace a world where financial freedom is not just a dream, but a
-        reality!
-      </p>
-      <div class={infobox}>
-        <InfoboxLeft>
-          <div q:slot="title">Is it Safe?</div>
-          <div q:slot="description">
-            Surely you're asking yourself, why should you trust us? The answer
-            is simple - you don't have to. With KSOX, trust takes on a new
-            dimension. Leveraging zk-STARK technology, we ensure that all crypto
-            assets are securely stored in a smart contract, inaccessible to
-            anyone but you. Only requests authenticated by users get processed –
-            we simply cannot act on your behalf
+      <InfoboxLeft>
+        <section id="ksox-exchange" q:slot="title">
+          KSOX Crypto Exchange
+        </section>
+        <div q:slot="description" class={description}>
+          <div class={descriptionBox}>
+            <div class={descriptionTitle}>Minimal Fees</div>
+            <div class={descriptionText}>
+              Experience trading with fees that are 10x lower than most
+              platforms, putting more of your assets where they belong - in your
+              wallet
+            </div>
           </div>
-          <div q:slot="image">
-            {/* <img src={ServerSvg} width={280} height={200} /> */}
+          <div class={descriptionBox}>
+            <div class={descriptionTitle}>Dynamic Pricing</div>
+            <div class={descriptionText}>
+              Through our advanced set of arbitrage bots, we tap into multiple
+              exchanges ensuring you receive the best market prices. We list a
+              diverse range of coins, from established to niche, offering
+              opportunities for every crypto enthusiast
+            </div>
           </div>
-        </InfoboxLeft>
-        <InfoboxRight>
-          <div q:slot="title">What does KSOX offer?</div>
-          <div q:slot="description">
-            Ever envisioned a world where contactless payments are the norm?
-            KSOX brings this reality closer to you with its state-of-the-art NFC
-            payment capabilities. Now you can handle transactions as simply as
-            if using a conventional card. Imagine stepping into your favorite
-            bar or cafe, paying with cryptocurrency effortlessly, and not having
-            to worry about your bank's solvency ever again!
+          <div class={descriptionBox}>
+            <div class={descriptionTitle}>Open-Source & Collaborative</div>
+            <div class={descriptionText}>
+              Our platform is entirely open-source. This ensures transparency
+              and allows our community to suggest improvements through GitHub
+            </div>
           </div>
-          <div q:slot="image">
-            {/* <img src={LaptopSvg} width={280} height={200} /> */}
+          <div class={descriptionBox}>
+            <div class={descriptionTitle}>AI & Bot Integration</div>
+            <div class={descriptionText}>
+              Our API flexibility means our platform isn't just powered by our
+              bots. We encourage third-party AI trading tools and bots to
+              provide users with dynamic trading strategies and asset
+              accumulation opportunities
+            </div>
           </div>
-        </InfoboxRight>
-      </div>
+        </div>
+        <div q:slot="image">
+          {/* <img src={ServerSvg} width={280} height={200} /> */}
+        </div>
+      </InfoboxLeft>
+      <InfoboxRight>
+        <section id="ksox-transfer" q:slot="title">
+          KSOX Transfer Processor
+        </section>
+        <div q:slot="description" class={description}>
+          <div class={descriptionBox}>
+            <div class={descriptionTitle}>Seamless Transfers</div>
+            <div class={descriptionText}>
+              Whether you're transferring between user accounts or sending to
+              external entities, our platform ensures smooth and secure
+              transactions
+            </div>
+          </div>
+          <div class={descriptionBox}>
+            <div class={descriptionTitle}>Optimized for Growth</div>
+            <div class={descriptionText}>
+              Our underlying technologies ensure KSOX isn't just a platform for
+              spending. It's ideal for holding and growing assets. With the
+              ever-changing crypto landscape, our arbitrage bots guarantee
+              profitable transactions
+            </div>
+          </div>
+        </div>
+        <div q:slot="image">
+          {/* <img src={ServerSvg} width={280} height={200} /> */}
+        </div>
+      </InfoboxRight>
+      <InfoboxLeft>
+        <section id="ksox-business" q:slot="title">
+          KSOX Business Suite
+        </section>
+        <div q:slot="description" class={description}>
+          <div class={descriptionBox}>
+            <div class={descriptionTitle}>Comprehensive Business Solutions</div>
+            <div class={descriptionText}>
+              Designed for businesses venturing into the crypto world. Whether
+              you're managing payments for your workforce, invoicing clients, or
+              running a full-fledged crypto business, KSOX Business Suite has
+              you covered
+            </div>
+          </div>
+          <div class={descriptionBox}>
+            <div class={descriptionTitle}>Streamlined Operations</div>
+            <div class={descriptionText}>
+              Send payment requests, create invoices, and more, all in one
+              platform. Our suite integrates both payment and exchange
+              functionalities to simplify your business needs
+            </div>
+          </div>
+        </div>
+        <div q:slot="image">
+          {/* <img src={ServerSvg} width={280} height={200} /> */}
+        </div>
+      </InfoboxLeft>
     </div>
   );
 });

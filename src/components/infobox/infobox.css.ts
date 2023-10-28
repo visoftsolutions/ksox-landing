@@ -58,7 +58,7 @@ export const textBoxRight = style([
     textAlign: "center",
     "@media": {
       [mediaQuery.xl]: {
-        textAlign: "right",
+        textAlign: "left",
       },
     },
   },
@@ -74,11 +74,4 @@ export const titleText = style({
   },
 });
 
-export const subText = style({
-  fontSize: "14px",
-  "@media": {
-    [mediaQuery.md]: {
-      fontSize: "18px",
-    },
-  },
-});
+export const subText = style({});

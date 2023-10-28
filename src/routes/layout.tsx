@@ -30,9 +30,9 @@ export default component$(() => {
         <main class={main}>
           <Slot />
         </main>
-        <div class={container}>
+        <section id="contact" class={container}>
           <Footer />
-        </div>
+        </section>
       </div>
     </>
   );
