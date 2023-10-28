@@ -1,4 +1,4 @@
-# KSOX-WEB
+# KSOX-LANDING
 
 [![GitHub Workflow Status Qwik Build](https://github.com/visoftsolutions/ksox-landing/actions/workflows/qwik_build.yml/badge.svg)](https://github.com/visoftsolutions/ksox-landing/actions/workflows/qwik_build.yml)
 ![Version](https://img.shields.io/badge/version-0.1.0-blue)
