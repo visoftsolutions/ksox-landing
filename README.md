@@ -49,4 +49,4 @@ npm run update
 
 ## 🤝 Contributing
 
-Encountered a hurdle or have a suggestion? Raise an issue or connect with our dedicated team. Your journey with KSOX-WEB is valued!
+Encountered a hurdle or have a suggestion? Raise an issue or connect with our dedicated team. Your journey with KSOX-LANDING is valued!
