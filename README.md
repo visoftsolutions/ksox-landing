@@ -5,7 +5,7 @@
 
 ## 🚀 Quick Start Guide
 
-Embarking on your journey with the KSOX-WEB workspace? Here's a streamlined guide:
+Embarking on your journey with the KSOX-LANDING workspace? Here's a streamlined guide:
 
 ### 1. **Cleanup**
 
