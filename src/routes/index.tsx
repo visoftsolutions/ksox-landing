@@ -37,7 +37,11 @@ export const head: DocumentHead = {
   meta: [
     {
       name: "description",
-      content: "Exchange, Transfer, build Crypto Business",
+      content: "KSOX: Your central hub for cryptocurrency exchange, transfer, and business solutions. Experience low fees, open-source flexibility, and a suite of tools to optimize your crypto endeavors.",
+    },
+    {
+      name: "keywords",
+      content: "Crypto exchange, Low fees, Arbitrage bots, Open source crypto, AI trading, Crypto transfer, Business platform, Cryptocurrency market, Asset accumulation, Invoice processing",
     },
     {
       name: "theme-color",
