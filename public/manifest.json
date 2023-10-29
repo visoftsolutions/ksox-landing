@@ -6,5 +6,13 @@
   "display": "standalone",
   "background_color": "#040c18",
   "theme_color": "#040c18",
-  "description": "Exchange, Transfer, Build Your Crypto Business with KSOX"
+  "description": "Exchange, Transfer, Build Your Crypto Business with KSOX",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "purpose": "any maskable",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
 }

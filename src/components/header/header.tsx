@@ -34,14 +34,24 @@ export default component$(() => {
           <a href={"#ksox-solutions"}>
             <div class={[box, navItem]}>
               <div class={boxText}>Solutions</div>
-              <img src={SolutionsSvg} width={20} height={20} alt="solutions" />
+              <img
+                src={SolutionsSvg}
+                width={20}
+                height={20}
+                alt="solutions image"
+              />
             </div>
           </a>
           <img src={DotSvg} width={5} height={5} alt="spacer" />
           <a href={"#contact"}>
             <div class={[box, navItem]}>
               <div class={boxText}>Connect</div>
-              <img src={ConnectSvg} width={20} height={20} alt="contact" />
+              <img
+                src={ConnectSvg}
+                width={20}
+                height={20}
+                alt="contact image"
+              />
             </div>
           </a>
           <img src={DotSvg} width={5} height={5} alt="spacer" />
@@ -52,7 +62,7 @@ export default component$(() => {
           >
             <div class={[box, navItem]}>
               <div class={boxText}>Source Code</div>
-              <img src={GithubSvg} width={20} height={20} alt="github" />
+              <img src={GithubSvg} width={20} height={20} alt="github image" />
             </div>
           </a>
         </div>
