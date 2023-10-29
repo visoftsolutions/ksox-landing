@@ -1,7 +1,6 @@
-import { type ComplexStyleRule, style } from "@vanilla-extract/css";
+import { style } from "@vanilla-extract/css";
 import { mediaQuery } from "~/breakpoint.css";
 import { vars } from "~/theme.css";
-import { navItem } from "../header/nav.css";
 
 export const footer = style({
   display: "grid",

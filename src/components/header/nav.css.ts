@@ -9,6 +9,6 @@ export const navItem = style({
   animationTimingFunction: vars.transitions.timingFunction,
   ":hover": {
     color: vars.color.textHighlight,
-    backgroundColor: vars.color.backgroundHighlight
+    backgroundColor: vars.color.backgroundHighlight,
   },
 });

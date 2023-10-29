@@ -21,7 +21,7 @@ export default component$(() => {
       <div class={wrapper}>
         <div class={leftSide}>
           <a href="#landing-page">
-            <img src={LogoSvg} width={100} height={40} class={navItem}/>
+            <img src={LogoSvg} width={100} height={40} class={navItem} />
           </a>
         </div>
         <div class={rightSide}>
