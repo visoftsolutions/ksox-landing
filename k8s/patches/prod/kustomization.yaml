@@ -5,15 +5,15 @@ namespace: ksox-finance
 
 resources:
   - ./../../resources
-  - ./ksox-finance.yaml
+  - ./ksox-landing.yaml
 
 secretGenerator:
-  - name: ksox-finance-secrets
-    env: ./enviroment/ksox-finance-secrets.env
+  - name: ksox-landing-secrets
+    env: ./enviroment/ksox-landing-secrets.env
 
 configMapGenerator:
-  - name: ksox-finance-config
-    env: ./enviroment/ksox-finance-config.env
+  - name: ksox-landing-config
+    env: ./enviroment/ksox-landing-config.env
 
 generatorOptions:
   disableNameSuffixHash: true

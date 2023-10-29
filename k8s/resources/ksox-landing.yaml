@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ksox-finance
+  name: ksox-landing
   labels:
-    app: ksox-finance
+    app: ksox-landing
 spec:
   selector:
     matchLabels:
-      app: ksox-finance
+      app: ksox-landing
   template:
     metadata:
       labels:
-        app: ksox-finance
+        app: ksox-landing
     spec:
       containers:
-        - name: ksox-finance
-          image: ksox-finance
+        - name: ksox-landing
+          image: ksox-landing
           envFrom:
             - secretRef:
-                name: ksox-finance-secrets
+                name: ksox-landing-secrets
             - configMapRef:
-                name: ksox-finance-config
+                name: ksox-landing-config
           ports:
             - containerPort: 80
           resources:
@@ -34,10 +34,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: ksox-finance
+  name: ksox-landing
 spec:
   selector:
-    app: ksox-finance
+    app: ksox-landing
   ports:
     - protocol: TCP
       port: 80
