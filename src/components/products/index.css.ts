@@ -9,13 +9,13 @@ export const products = style({
 
 export const description = style({
   display: "grid",
-  gap: "20px",
+  gap: "25px",
   gridAutoFlow: "row",
 });
 
 export const descriptionBox = style({
   display: "grid",
-  gap: "10px",
+  gap: "15px",
   gridAutoFlow: "row",
 });
 

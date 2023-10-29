@@ -18,7 +18,7 @@ export default component$(() => {
             The Ultimate Nexus of Exchange, Transfer, and Business Solutions
           </h1>
           <p class={subText}>
-            Exchange, Transfer, build Crypto Business with us!
+            Run Your crypto business with us!
           </p>
         </div>
         <img

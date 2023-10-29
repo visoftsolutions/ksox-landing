@@ -7,9 +7,8 @@ import {
   footerTileTitle,
   iconsBox,
   infoBox,
-  leftInfo,
-  rightInfo,
   subTitleText,
+  infoBoxTile,
   titleText,
 } from "./footer.css";
 
@@ -57,8 +56,8 @@ export default component$(() => {
       </div>
 
       <div class={infoBox}>
-        <div class={leftInfo}>
-          <h3 class={subTitleText}>Products</h3>
+        <div class={infoBoxTile}>
+          <div class={subTitleText}>Products</div>
           <a
             href={"https://ksox.finance/"}
             target="_blank"
@@ -91,9 +90,8 @@ export default component$(() => {
             </div>
           </a>
         </div>
-
-        <div class={rightInfo}>
-          <h3 class={subTitleText}>Technology</h3>
+        <div class={infoBoxTile}>
+          <div class={subTitleText}>Technology</div>
           <a
             href={"https://www.rust-lang.org/"}
             target="_blank"
@@ -114,7 +112,7 @@ export default component$(() => {
           >
             <div class={footerTileTitle}>Qwik</div>
             <div class={footerTileSubtitle}>
-              Ksox Business crypto business platform
+              Qwik is a new kind of web framework that can deliver instant loading web applications at any size or complexity
             </div>
           </a>
           <a

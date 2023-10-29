@@ -1,6 +1,7 @@
 import { type ComplexStyleRule, style } from "@vanilla-extract/css";
 import { mediaQuery } from "~/breakpoint.css";
 import { vars } from "~/theme.css";
+import { navItem } from "../header/nav.css";
 
 export const footer = style({
   display: "grid",
@@ -43,31 +44,26 @@ export const iconsBox = style({
 export const infoBox = style({
   display: "grid",
   fontSize: "16px",
-  gap: "24px",
-  gridTemplateRows: "repeat(2, 1fr)",
-  gridTemplateColumns: "1fr",
+  gap: "30px",
+  gridAutoFlow: "row",
   "@media": {
     [mediaQuery.md]: {
-      gridTemplateColumns: "repeat(2, 1fr)",
-      gridTemplateRows: "1fr",
+      gridAutoFlow: "column",
     },
   },
 });
 
-const sideInfo: ComplexStyleRule = {
+export const infoBoxTile = style({
   display: "grid",
   gridAutoFlow: "row",
-  gap: "20px",
+  gap: "25px",
   textAlign: "center",
   "@media": {
     [mediaQuery.md]: {
       textAlign: "left",
     },
   },
-};
-
-export const leftInfo = style([sideInfo]);
-export const rightInfo = style([sideInfo]);
+});
 
 export const titleText = style({
   fontSize: "24px",

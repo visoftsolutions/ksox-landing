@@ -33,7 +33,7 @@ export const imageRight = style({
 
 const textBox: ComplexStyleRule = {
   display: "grid",
-  gap: "10px",
+  gap: "15px",
   textAlign: "center",
 };
 

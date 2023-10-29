@@ -23,3 +23,20 @@ export const infobox = style({
   gridAutoFlow: "row",
   gap: "50px",
 });
+
+export const description = style({
+  display: "grid",
+  gap: "25px",
+  gridAutoFlow: "row",
+});
+
+export const descriptionBox = style({
+  display: "grid",
+  gap: "15px",
+  gridAutoFlow: "row",
+});
+
+export const descriptionText = style({
+  fontSize: "20px",
+  fontWeight: "normal",
+});
