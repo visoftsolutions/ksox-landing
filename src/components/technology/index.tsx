@@ -34,7 +34,7 @@ export default component$(() => {
             </div>
           </div>
           <div q:slot="image">
-            <img src={ServerSvg} width={280} height={200} />
+            <img src={ServerSvg} width={280} height={200} alt="safety image" />
           </div>
         </InfoboxLeft>
         <InfoboxRight>
@@ -53,7 +53,7 @@ export default component$(() => {
             </div>
           </div>
           <div q:slot="image">
-            <img src={LaptopSvg} width={280} height={200} />
+            <img src={LaptopSvg} width={280} height={200} alt="offer image" />
           </div>
         </InfoboxRight>
         <InfoboxLeft>
@@ -71,7 +71,12 @@ export default component$(() => {
             </div>
           </div>
           <div q:slot="image">
-            <img src={ReceiptSvg} width={280} height={200} />
+            <img
+              src={ReceiptSvg}
+              width={280}
+              height={200}
+              alt="features image"
+            />
           </div>
         </InfoboxLeft>
       </div>

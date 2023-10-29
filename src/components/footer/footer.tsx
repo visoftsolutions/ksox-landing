@@ -29,28 +29,28 @@ export default component$(() => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={DiscordSvg} width={30} height={30} />
+            <img src={DiscordSvg} width={30} height={30} alt="discord" />
           </a>
           <a
             href={"https://t.me/ksox_community"}
             target="_blank"
             rel="noreferrer"
           >
-            <img src={TelegramSvg} width={30} height={30} />
+            <img src={TelegramSvg} width={30} height={30} alt="telegram" />
           </a>
           <a
             href={"https://www.linkedin.com/company/ksox"}
             target="_blank"
             rel="noreferrer"
           >
-            <img src={LinkedInSvg} width={30} height={30} />
+            <img src={LinkedInSvg} width={30} height={30} alt="linkedin" />
           </a>
           <a
             href={"https://twitter.com/KsoxExchange"}
             target="_blank"
             rel="noreferrer"
           >
-            <img src={XSvg} width={30} height={30} />
+            <img src={XSvg} width={30} height={30} alt="twitter" />
           </a>
         </div>
       </div>

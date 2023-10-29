@@ -21,24 +21,30 @@ export default component$(() => {
       <div class={wrapper}>
         <div class={leftSide}>
           <a href="#landing-page">
-            <img src={LogoSvg} width={100} height={40} class={navItem} />
+            <img
+              src={LogoSvg}
+              width={100}
+              height={40}
+              class={navItem}
+              alt="ksox"
+            />
           </a>
         </div>
         <div class={rightSide}>
           <a href={"#ksox-solutions"}>
             <div class={[box, navItem]}>
               <div class={boxText}>Solutions</div>
-              <img src={SolutionsSvg} width={20} height={20} />
+              <img src={SolutionsSvg} width={20} height={20} alt="solutions" />
             </div>
           </a>
-          <img src={DotSvg} width={5} height={5} />
+          <img src={DotSvg} width={5} height={5} alt="spacer" />
           <a href={"#contact"}>
             <div class={[box, navItem]}>
               <div class={boxText}>Connect</div>
-              <img src={ConnectSvg} width={20} height={20} />
+              <img src={ConnectSvg} width={20} height={20} alt="contact" />
             </div>
           </a>
-          <img src={DotSvg} width={5} height={5} />
+          <img src={DotSvg} width={5} height={5} alt="spacer" />
           <a
             href={"https://github.com/visoftsolutions"}
             target="_blank"
@@ -46,7 +52,7 @@ export default component$(() => {
           >
             <div class={[box, navItem]}>
               <div class={boxText}>Source Code</div>
-              <img src={GithubSvg} width={20} height={20} />
+              <img src={GithubSvg} width={20} height={20} alt="github" />
             </div>
           </a>
         </div>
