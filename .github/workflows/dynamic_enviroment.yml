@@ -15,7 +15,7 @@ jobs:
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
         run: |
-          mkdir -p $GITHUB_WORKSPACE/.kube
+          mkdir -p $GITHUB_WORKSPACE/.kube 
           echo "$KUBE_CONFIG" | base64 --decode > $GITHUB_WORKSPACE/.kube/config
           export KUBECONFIG=$GITHUB_WORKSPACE/.kube/config
           echo "$GITHUB_WORKSPACE/.kube/config"
