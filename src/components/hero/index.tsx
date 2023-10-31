@@ -15,7 +15,7 @@ export default component$(() => {
       <div class={heroBox}>
         <div class={heroContentBox}>
           <h1 class={titleText}>
-            The Ultimate Nexus of Exchange, Transfer, and Business Solutions
+            ALA!!! The Ultimate Nexus of Exchange, Transfer, and Business Solutions
           </h1>
           <p class={subText}>Run Your crypto business with us!</p>
         </div>
