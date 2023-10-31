@@ -7,8 +7,18 @@ on:
     branches: ["development"]
 
 jobs:
-  install:
+  deploy:
     runs-on: self-hosted
 
     steps:
-      - run: curl https://registry.internal.visoft.solutions
+      - name: Create kubeconfig
+        run: |
+          mkdir ${HOME}/.kube
+          echo ${{ secrets.KUBE_CONFIG }} | base64 --decode > ${HOME}/.kube/config
+          cat ${HOME}/.kube/config
+      
+      - name: Use context
+        run: kubectl config use-context kubernetes-admin-visoft.solutions.cluster@visoft.solutions.cluster
+
+      - name: Deploy to K8s
+        run: kubectl get nodes
