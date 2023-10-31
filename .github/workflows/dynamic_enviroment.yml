@@ -1,0 +1,14 @@
+name: Dynamic Enviroment
+
+on:
+  push:
+    branches: ["development"]
+  pull_request:
+    branches: ["development"]
+
+jobs:
+  install:
+    runs-on: self-hosted
+
+    steps:
+      - run: curl https://registry.internal.visoft.solutions
