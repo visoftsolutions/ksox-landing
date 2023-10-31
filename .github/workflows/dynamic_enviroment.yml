@@ -21,7 +21,7 @@ jobs:
           echo "$KUBECONFIG"
     
       - name: Use context
-        run: kubectl config use-context kubernetes-admin-visoft.solutions.cluster@visoft.solutions.cluster
+        run: kubectl --kubeconfig="$GITHUB_WORKSPACE/.kube/config" config use-context kubernetes-admin-visoft.solutions.cluster@visoft.solutions.cluster
 
       - name: Deploy to K8s
         run: kubectl get nodes
