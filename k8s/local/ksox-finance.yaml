@@ -16,11 +16,11 @@ spec:
       containers:
         - name: ksox-landing
           image: local-ksox-landing
-          envFrom:
-            - secretRef:
-                name: ksox-landing-secrets
-            - configMapRef:
-                name: ksox-landing-config
+          # envFrom:
+          #   - secretRef:
+          #       name: ksox-landing-secrets
+          #   - configMapRef:
+          #       name: ksox-landing-config
           ports:
             - containerPort: 80
           resources:

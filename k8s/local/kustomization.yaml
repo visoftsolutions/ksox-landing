@@ -8,14 +8,5 @@ resources:
   - ./issuer.yaml
   - ./ksox-finance.yaml
 
-secretGenerator:
-  - name: ksox-landing-secrets
-    env: ./enviroment/ksox-landing-secrets.env
-
-configMapGenerator:
-  - name: ksox-landing-config
-    env: ./enviroment/ksox-landing-config.env
-
-
 generatorOptions:
   disableNameSuffixHash: true
