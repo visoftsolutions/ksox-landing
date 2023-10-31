@@ -1,7 +1,7 @@
 # KSOX-LANDING
 
-[![GitHub Workflow Status Qwik Build](https://github.com/visoftsolutions/ksox-landing/actions/workflows/qwik_build.yml/badge.svg)](https://github.com/visoftsolutions/ksox-landing/actions/workflows/qwik_build.yml)
-[![Dev Dynamic Enviroment](https://github.com/visoftsolutions/ksox-landing/actions/workflows/development_dynamic_enviroment.yml/badge.svg)](https://github.com/visoftsolutions/ksox-landing/actions/workflows/development_dynamic_enviroment.yml)
+[![Master build](https://github.com/visoftsolutions/ksox-landing/actions/workflows/master_build.yml/badge.svg)](https://github.com/visoftsolutions/ksox-landing/actions/workflows/master_build.yml)
+[![Development Dynamic Enviroment](https://github.com/visoftsolutions/ksox-landing/actions/workflows/development_dynamic_enviroment.yml/badge.svg)](https://github.com/visoftsolutions/ksox-landing/actions/workflows/development_dynamic_enviroment.yml)
 ![Version](https://img.shields.io/badge/version-0.1.0-blue)
 
 ## 🚀 Quick Start Guide
