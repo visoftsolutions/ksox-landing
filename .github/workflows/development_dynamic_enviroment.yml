@@ -13,9 +13,40 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-  kubeconfig:
+  install:
     runs-on: self-hosted
     needs: ["checkout"]
+
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm ci
+
+  fmt:
+    runs-on: self-hosted
+    needs: ["install"]
+
+    steps:
+      - run: npm run fmt.check
+
+  lint:
+    runs-on: self-hosted
+    needs: ["install"]
+
+    steps:
+      - run: npm run lint
+
+  build:
+    runs-on: self-hosted
+    needs: ["install", "fmt", "lint"]
+
+    steps:
+      - run: npm run build
+
+  kubeconfig:
+    runs-on: self-hosted
+    needs: ["build"]
 
     steps:
       - name: Create kubeconfig
@@ -25,7 +56,7 @@ jobs:
           mkdir -p $GITHUB_WORKSPACE/.kube 
           echo "$KUBE_CONFIG" | base64 --decode > $GITHUB_WORKSPACE/.kube/config
 
-  fmt:
+  deploy:
     runs-on: self-hosted
     needs: ["kubeconfig"]
 
