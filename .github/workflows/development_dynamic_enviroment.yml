@@ -55,7 +55,7 @@ jobs:
         run: |
           mkdir -p $GITHUB_WORKSPACE/.kube 
           echo "$KUBE_CONFIG" | base64 --decode > $GITHUB_WORKSPACE/.kube/config
-   
+
   deploy:
     runs-on: self-hosted
     needs: ["kubeconfig"]
