@@ -42,3 +42,28 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ksox-landing
+  annotations:
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  ingressClassName: ingress-nginx-external
+  tls:
+    - hosts:
+        - landing.ksox.finance
+      secretName: ksox-finance-tls
+  rules:
+    - host: landing.ksox.finance
+      http:
+        paths:
+          - path: /(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: ksox-landing
+                port:
+                  number: 80

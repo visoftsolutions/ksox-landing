@@ -1,0 +1,23 @@
+name: Dev Dynamic Enviroment
+
+on:
+  push:
+    branches: ["development"]
+  pull_request:
+    branches: ["development"]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create kubeconfig
+        env:
+          KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
+        run: |
+          mkdir -p $GITHUB_WORKSPACE/.kube 
+          echo "$KUBE_CONFIG" | base64 --decode > $GITHUB_WORKSPACE/.kube/config
+
+      - name: Deploy to K8s
+        run: skaffold run --kubeconfig "$GITHUB_WORKSPACE/.kube/config" --filename "$GITHUB_WORKSPACE/dev-skaffold.yaml" --default-repo registry.internal.visoft.solutions
