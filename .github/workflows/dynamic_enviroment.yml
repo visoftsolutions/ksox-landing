@@ -12,9 +12,11 @@ jobs:
 
     steps:
       - name: Create kubeconfig
+        env:
+          KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
         run: |
           mkdir -p $GITHUB_WORKSPACE/.kube
-          echo ${{ secrets.KUBE_CONFIG }} | base64 --decode > $GITHUB_WORKSPACE/.kube/config
+          echo "$KUBE_CONFIG" | base64 --decode > $GITHUB_WORKSPACE/.kube/config
           export KUBECONFIG=$GITHUB_WORKSPACE/.kube/config
           echo "$GITHUB_WORKSPACE/.kube/config"
           echo "$(cat "$GITHUB_WORKSPACE/.kube/config")"
