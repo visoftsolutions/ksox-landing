@@ -1,16 +1,16 @@
 apiVersion: skaffold/v4beta6
 kind: Config
 metadata:
-  name: ksox-landing
+  name: dev-ksox-landing
 build:
   platforms:
     - linux/amd64
   artifacts:
-    - image: ksox-landing
+    - image: dev-ksox-landing
       context: ./
       docker:
         dockerfile: ksox-landing.dockerfile
 manifests:
   kustomize:
     paths:
-      - ./k8s/patches/prod
+      - ./k8s/dev

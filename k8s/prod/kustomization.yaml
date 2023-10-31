@@ -4,7 +4,6 @@ kind: Kustomization
 namespace: ksox-finance
 
 resources:
-  - ./../../resources
   - ./ksox-landing.yaml
 
 secretGenerator:
