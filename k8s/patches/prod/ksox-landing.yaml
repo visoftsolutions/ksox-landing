@@ -10,7 +10,7 @@ spec:
   tls:
     - hosts:
         - landing.ksox.finance
-      secretName: landing-ksox-finance-tls
+      secretName: ksox-finance-tls
   rules:
     - host: landing.ksox.finance
       http:

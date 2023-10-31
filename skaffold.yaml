@@ -13,4 +13,4 @@ build:
 manifests:
   kustomize:
     paths:
-      - ./k8s/patches/dev
+      - ./k8s/patches/prod
