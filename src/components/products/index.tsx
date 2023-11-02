@@ -8,6 +8,9 @@ import {
 } from "./index.css";
 import InfoboxLeft from "../infobox/infoboxLeft";
 import InfoboxRight from "../infobox/infoboxRight";
+import ExchangeSvg from "~/media/home/exchange.svg";
+import PaymentSvg from "~/media/home/payment.svg";
+import BusinessSvg from "~/media/home/business.svg";
 
 export default component$(() => {
   return (
@@ -52,7 +55,7 @@ export default component$(() => {
           </div>
         </div>
         <div q:slot="image">
-          {/* <img src={ServerSvg} width={280} height={200} /> */}
+          <img src={ExchangeSvg} width={500} height={336} />
         </div>
       </InfoboxLeft>
       <InfoboxRight>
@@ -79,7 +82,7 @@ export default component$(() => {
           </div>
         </div>
         <div q:slot="image">
-          {/* <img src={ServerSvg} width={280} height={200} /> */}
+          <img src={PaymentSvg} width={400} height={347} />
         </div>
       </InfoboxRight>
       <InfoboxLeft>
@@ -106,7 +109,7 @@ export default component$(() => {
           </div>
         </div>
         <div q:slot="image">
-          {/* <img src={ServerSvg} width={280} height={200} /> */}
+          <img src={BusinessSvg} width={400} height={282} />
         </div>
       </InfoboxLeft>
     </div>
