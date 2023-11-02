@@ -1,15 +1,20 @@
 import { component$ } from "@builder.io/qwik";
 import {
+  businessSvgSize,
   description,
   descriptionBox,
   descriptionText,
   descriptionTitle,
+  exchangeSvgSize,
+  imageBox,
+  launchButton,
   products,
+  transferSvgSize,
 } from "./index.css";
 import InfoboxLeft from "../infobox/infoboxLeft";
 import InfoboxRight from "../infobox/infoboxRight";
 import ExchangeSvg from "~/media/home/exchange.svg";
-import PaymentSvg from "~/media/home/payment.svg";
+import TransferSvg from "~/media/home/transfer.svg";
 import BusinessSvg from "~/media/home/business.svg";
 
 export default component$(() => {
@@ -55,7 +60,23 @@ export default component$(() => {
           </div>
         </div>
         <div q:slot="image">
-          <img src={ExchangeSvg} width={500} height={336} />
+          <div class={imageBox}>
+            <img
+              src={ExchangeSvg}
+              class={exchangeSvgSize}
+              width={300}
+              height={200}
+              alt="exchange product image"
+            />
+            <a
+              href={"https://ksox.finance"}
+              target="_blank"
+              rel="noreferrer"
+              class={launchButton}
+            >
+              Exchange Crypto
+            </a>
+          </div>
         </div>
       </InfoboxLeft>
       <InfoboxRight>
@@ -82,7 +103,23 @@ export default component$(() => {
           </div>
         </div>
         <div q:slot="image">
-          <img src={PaymentSvg} width={400} height={347} />
+          <div class={imageBox}>
+            <img
+              src={TransferSvg}
+              class={transferSvgSize}
+              width={400}
+              height={350}
+              alt="transfer product image"
+            />
+            <a
+              href={"https://ksox.finance"}
+              target="_blank"
+              rel="noreferrer"
+              class={launchButton}
+            >
+              Transfer Crypto
+            </a>
+          </div>
         </div>
       </InfoboxRight>
       <InfoboxLeft>
@@ -109,7 +146,23 @@ export default component$(() => {
           </div>
         </div>
         <div q:slot="image">
-          <img src={BusinessSvg} width={400} height={282} />
+          <div class={imageBox}>
+            <img
+              src={BusinessSvg}
+              class={businessSvgSize}
+              width={400}
+              height={300}
+              alt="business product image"
+            />
+            <a
+              href={"https://ksox.finance"}
+              target="_blank"
+              rel="noreferrer"
+              class={launchButton}
+            >
+              Crypto Business
+            </a>
+          </div>
         </div>
       </InfoboxLeft>
     </div>

@@ -1,6 +1,10 @@
 import { style } from "@vanilla-extract/css";
+import { mediaQuery } from "~/breakpoint.css";
+import { vars } from "~/theme.css";
 
 export const products = style({
+  paddingTop: "40px",
+  paddingBottom: "40px",
   display: "grid",
   justifyContent: "center",
   alignItems: "center",
@@ -25,6 +29,60 @@ export const descriptionTitle = style({
 });
 
 export const descriptionText = style({
-  fontSize: "18px",
+  fontSize: "14px",
   fontWeight: "normal",
+  "@media": {
+    [mediaQuery.md]: {
+      fontSize: "18px",
+    },
+  },
+});
+
+export const imageBox = style({
+  display: "grid",
+  gridAutoFlow: "column",
+  justifyItems: "center",
+  gridTemplateRows: "auto auto",
+  gap: "40px",
+});
+
+export const launchButton = style({
+  padding: "15px",
+  backgroundColor: vars.color.backgroundWhite,
+  color: vars.color.textBlue,
+  borderRadius: "15px",
+  fontWeight: "bold",
+});
+
+export const exchangeSvgSize = style({
+  width: "300px",
+  height: "200px",
+  "@media": {
+    [mediaQuery.md]: {
+      width: "500px",
+      height: "350px",
+    },
+  },
+});
+
+export const transferSvgSize = style({
+  width: "300px",
+  height: "200px",
+  "@media": {
+    [mediaQuery.md]: {
+      width: "400px",
+      height: "350px",
+    },
+  },
+});
+
+export const businessSvgSize = style({
+  width: "300px",
+  height: "200px",
+  "@media": {
+    [mediaQuery.md]: {
+      width: "400px",
+      height: "300px",
+    },
+  },
 });

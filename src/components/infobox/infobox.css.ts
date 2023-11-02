@@ -13,20 +13,15 @@ export const box = style({
   },
 });
 
-export const imageLeft = style({
-  display: "none",
-  "@media": {
-    [mediaQuery.xl]: {
-      display: "block",
-    },
-  },
-});
+export const imageLeft = style({});
 
 export const imageRight = style({
-  display: "none",
+  gridRowStart: "2",
+  gridRowEnd: "3",
   "@media": {
     [mediaQuery.xl]: {
-      display: "block",
+      gridRowStart: "1",
+      gridRowEnd: "2",
     },
   },
 });
