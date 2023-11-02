@@ -3,7 +3,9 @@ import { mediaQuery } from "~/breakpoint.css";
 
 export const box = style({
   display: "grid",
+  gap: "50px",
   alignItems: "center",
+  justifyItems: "center",
   "@media": {
     [mediaQuery.xl]: {
       gridTemplateColumns: "repeat(2, 1fr)",
@@ -11,22 +13,15 @@ export const box = style({
   },
 });
 
-export const imageLeft = style({
-  display: "none",
-  "@media": {
-    [mediaQuery.xl]: {
-      display: "block",
-      justifySelf: "start",
-    },
-  },
-});
+export const imageLeft = style({});
 
 export const imageRight = style({
-  display: "none",
+  gridRowStart: "2",
+  gridRowEnd: "3",
   "@media": {
     [mediaQuery.xl]: {
-      display: "block",
-      justifySelf: "end",
+      gridRowStart: "1",
+      gridRowEnd: "2",
     },
   },
 });

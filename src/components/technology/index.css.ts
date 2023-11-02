@@ -37,6 +37,22 @@ export const descriptionBox = style({
 });
 
 export const descriptionText = style({
-  fontSize: "20px",
+  fontSize: "14px",
   fontWeight: "normal",
+  "@media": {
+    [mediaQuery.md]: {
+      fontSize: "18px",
+    },
+  },
+});
+
+export const svgSize = style({
+  width: "250px",
+  height: "150px",
+  "@media": {
+    [mediaQuery.md]: {
+      width: "300px",
+      height: "200px",
+    },
+  },
 });

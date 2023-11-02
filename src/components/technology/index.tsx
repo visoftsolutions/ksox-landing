@@ -4,6 +4,7 @@ import {
   descriptionBox,
   descriptionText,
   infobox,
+  svgSize,
   technology,
   titleText,
 } from "./index.css";
@@ -34,7 +35,13 @@ export default component$(() => {
             </div>
           </div>
           <div q:slot="image">
-            <img src={ServerSvg} width={280} height={200} alt="safety image" />
+            <img
+              src={ServerSvg}
+              class={svgSize}
+              width={250}
+              height={150}
+              alt="safety image"
+            />
           </div>
         </InfoboxLeft>
         <InfoboxRight>
@@ -53,7 +60,13 @@ export default component$(() => {
             </div>
           </div>
           <div q:slot="image">
-            <img src={LaptopSvg} width={280} height={200} alt="offer image" />
+            <img
+              src={LaptopSvg}
+              class={svgSize}
+              width={250}
+              height={150}
+              alt="offer image"
+            />
           </div>
         </InfoboxRight>
         <InfoboxLeft>
@@ -73,8 +86,9 @@ export default component$(() => {
           <div q:slot="image">
             <img
               src={ReceiptSvg}
-              width={280}
-              height={200}
+              class={svgSize}
+              width={250}
+              height={150}
               alt="features image"
             />
           </div>
