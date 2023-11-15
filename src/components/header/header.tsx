@@ -2,6 +2,8 @@ import { component$ } from "@builder.io/qwik";
 
 import LogoSvg from "~/media/logo.svg";
 import {
+  LogoBox,
+  LogoText,
   box,
   boxText,
   header,
@@ -20,14 +22,9 @@ export default component$(() => {
     <div class={header}>
       <div class={wrapper}>
         <div class={leftSide}>
-          <a href="#landing-page">
-            <img
-              src={LogoSvg}
-              width={100}
-              height={40}
-              class={navItem}
-              alt="ksox"
-            />
+          <a href="#landing-page" class={[LogoBox, navItem]}>
+            <img src={LogoSvg} width={50} height={50} alt="ksox" />
+            <div class={LogoText}>KSOX</div>
           </a>
         </div>
         <div class={rightSide}>

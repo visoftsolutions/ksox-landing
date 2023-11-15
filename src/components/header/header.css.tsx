@@ -72,3 +72,16 @@ export const boxText = style({
     },
   },
 });
+
+export const LogoBox = style({
+  display: "grid",
+  gridAutoFlow: "column",
+  gap: "14px",
+  justifyItems: "center",
+  alignItems: "center",
+});
+
+export const LogoText = style({
+  fontWeight: "bold",
+  fontSize: "20px",
+});
