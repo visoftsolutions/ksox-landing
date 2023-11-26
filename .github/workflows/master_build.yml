@@ -8,13 +8,13 @@ on:
 
 jobs:
   checkout:
-    runs-on: self-hosted
+    runs-on: arc-runner-set
 
     steps:
       - uses: actions/checkout@v4
 
   install:
-    runs-on: self-hosted
+    runs-on: arc-runner-set
     needs: ["checkout"]
 
     steps:
@@ -24,21 +24,21 @@ jobs:
       - run: npm ci
 
   fmt:
-    runs-on: self-hosted
+    runs-on: arc-runner-set
     needs: ["install"]
 
     steps:
       - run: npm run fmt.check
 
   lint:
-    runs-on: self-hosted
+    runs-on: arc-runner-set
     needs: ["install"]
 
     steps:
       - run: npm run lint
 
   build:
-    runs-on: self-hosted
+    runs-on: arc-runner-set
     needs: ["install", "fmt", "lint"]
 
     steps:

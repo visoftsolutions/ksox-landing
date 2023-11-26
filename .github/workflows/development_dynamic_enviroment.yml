@@ -8,13 +8,13 @@ on:
 
 jobs:
   checkout:
-    runs-on: self-hosted
+    runs-on: arc-runner-set
 
     steps:
       - uses: actions/checkout@v4
 
   install:
-    runs-on: self-hosted
+    runs-on: arc-runner-set
     needs: ["checkout"]
 
     steps:
@@ -24,28 +24,28 @@ jobs:
       - run: npm ci
 
   fmt:
-    runs-on: self-hosted
+    runs-on: arc-runner-set
     needs: ["install"]
 
     steps:
       - run: npm run fmt.check
 
   lint:
-    runs-on: self-hosted
+    runs-on: arc-runner-set
     needs: ["install"]
 
     steps:
       - run: npm run lint
 
   build:
-    runs-on: self-hosted
+    runs-on: arc-runner-set
     needs: ["install", "fmt", "lint"]
 
     steps:
       - run: npm run build
 
   kubeconfig:
-    runs-on: self-hosted
+    runs-on: arc-runner-set
     needs: ["build"]
 
     steps:
@@ -57,7 +57,7 @@ jobs:
           echo "$KUBE_CONFIG" | base64 --decode > $GITHUB_WORKSPACE/.kube/config
 
   deploy:
-    runs-on: self-hosted
+    runs-on: arc-runner-set
     needs: ["kubeconfig"]
 
     steps:
