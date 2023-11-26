@@ -13,29 +13,29 @@ jobs:
         runner: [arc-runner-set]
 
     runs-on: ${{ matrix.runner }}
-    container: docker.io/node:lts-slim
+    container: docker.io/ubuntu:18.04
 
     steps:
-      - uses: actions/checkout@v4
-      - name: install
-        run: npm ci
-      - name: fmt
-        run: npm run fmt.check
-      - name: lint
-        run: npm run lint
-      - name: build
-        run: npm run build
-      - name: install curl
-        run: apt update && apt upgrade -y && apt install -y curl
-      - name: kubeconfig
-        env:
-          KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
-        run: |
-          mkdir -p $GITHUB_WORKSPACE/.kube 
-          echo "$KUBE_CONFIG" | base64 --decode > $GITHUB_WORKSPACE/.kube/config
+      # - uses: actions/checkout@v4
+      # - name: install
+      #   run: npm ci
+      # - name: fmt
+      #   run: npm run fmt.check
+      # - name: lint
+      #   run: npm run lint
+      # - name: build
+      #   run: npm run build
+      - name: update
+        run: apt update && apt upgrade -y
+      # - name: kubeconfig
+      #   env:
+      #     KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
+      #   run: |
+      #     mkdir -p $GITHUB_WORKSPACE/.kube 
+      #     echo "$KUBE_CONFIG" | base64 --decode > $GITHUB_WORKSPACE/.kube/config
       - name: install docker
         run: curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh && chmod 666 /var/run/docker.sock
-      - name: install skaffold
-        run: curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && install skaffold /usr/local/bin/
-      - name: deploy
-        run: skaffold run --kubeconfig "$GITHUB_WORKSPACE/.kube/config" --filename "$GITHUB_WORKSPACE/dev-skaffold.yaml" --default-repo registry.internal.visoft.solutions
+      # - name: install skaffold
+      #   run: curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && install skaffold /usr/local/bin/
+      # - name: deploy
+      #   run: skaffold run --kubeconfig "$GITHUB_WORKSPACE/.kube/config" --filename "$GITHUB_WORKSPACE/dev-skaffold.yaml" --default-repo registry.internal.visoft.solutions
