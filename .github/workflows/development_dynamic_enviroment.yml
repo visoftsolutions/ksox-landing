@@ -17,7 +17,7 @@ jobs:
       image: docker.io/node:lts-slim
       volumes:
         - /var/run/docker.sock:/var/run/docker.sock
-      options: --previlaged
+      options: --privileged
 
     steps:
       - uses: actions/checkout@v4
