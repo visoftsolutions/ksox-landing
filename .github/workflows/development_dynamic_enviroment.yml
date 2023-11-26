@@ -34,7 +34,7 @@ jobs:
           mkdir -p $GITHUB_WORKSPACE/.kube 
           echo "$KUBE_CONFIG" | base64 --decode > $GITHUB_WORKSPACE/.kube/config
       - name: install docker
-        run: curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh && sudo dockerd
+        run: curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh && chmod 666 /var/run/docker.sock
       - name: install skaffold
         run: curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && install skaffold /usr/local/bin/
       - name: deploy
