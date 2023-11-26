@@ -26,7 +26,7 @@ jobs:
       # - name: build
       #   run: npm run build
       - name: update
-        run: apt update && apt upgrade -y
+        run: apt update && apt upgrade -y && apt install -y curl
       # - name: kubeconfig
       #   env:
       #     KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
