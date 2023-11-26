@@ -7,59 +7,23 @@ on:
     branches: ["development"]
 
 jobs:
-  checkout:
+  build:
     runs-on: arc-runner-set
 
     steps:
       - uses: actions/checkout@v4
-
-  install:
-    runs-on: arc-runner-set
-    needs: ["checkout"]
-
-    steps:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
       - run: npm ci
-
-  fmt:
-    runs-on: arc-runner-set
-    needs: ["install"]
-
-    steps:
       - run: npm run fmt.check
-
-  lint:
-    runs-on: arc-runner-set
-    needs: ["install"]
-
-    steps:
       - run: npm run lint
-
-  build:
-    runs-on: arc-runner-set
-    needs: ["install", "fmt", "lint"]
-
-    steps:
       - run: npm run build
-
-  kubeconfig:
-    runs-on: arc-runner-set
-    needs: ["build"]
-
-    steps:
       - name: Create kubeconfig
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
         run: |
           mkdir -p $GITHUB_WORKSPACE/.kube 
           echo "$KUBE_CONFIG" | base64 --decode > $GITHUB_WORKSPACE/.kube/config
-
-  deploy:
-    runs-on: arc-runner-set
-    needs: ["kubeconfig"]
-
-    steps:
       - name: Deploy to kubernetes
         run: skaffold run --kubeconfig "$GITHUB_WORKSPACE/.kube/config" --filename "$GITHUB_WORKSPACE/dev-skaffold.yaml" --default-repo registry.internal.visoft.solutions
