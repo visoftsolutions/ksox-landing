@@ -13,9 +13,7 @@ jobs:
         runner: [arc-runner-set]
 
     runs-on: ${{ matrix.runner }}
-    container:
-      image: docker.io/node:lts-slim
-      options: --privileged
+    container: docker.io/node:lts-slim
 
     steps:
       - uses: actions/checkout@v4
@@ -27,15 +25,15 @@ jobs:
         run: npm run lint
       - name: build
         run: npm run build
-      - name: update
-        run: apt update && apt upgrade -y && apt install -y curl && curl -sSL https://get.docker.com/ | sh && dockerd
-      - name: kubeconfig
-        env:
-          KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
-        run: |
-          mkdir -p $GITHUB_WORKSPACE/.kube 
-          echo "$KUBE_CONFIG" | base64 --decode > $GITHUB_WORKSPACE/.kube/config
-      - name: install skaffold
-        run: curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && install skaffold /usr/local/bin/
-      - name: deploy
-        run: skaffold run --kubeconfig "$GITHUB_WORKSPACE/.kube/config" --filename "$GITHUB_WORKSPACE/dev-skaffold.yaml" --default-repo registry.internal.visoft.solutions
+      # - name: update
+      #   run: apt update && apt upgrade -y && apt install -y curl && curl -sSL https://get.docker.com/ | sh && dockerd
+      # - name: kubeconfig
+      #   env:
+      #     KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
+      #   run: |
+      #     mkdir -p $GITHUB_WORKSPACE/.kube
+      #     echo "$KUBE_CONFIG" | base64 --decode > $GITHUB_WORKSPACE/.kube/config
+      # - name: install skaffold
+      #   run: curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && install skaffold /usr/local/bin/
+      # - name: deploy
+      #   run: skaffold run --kubeconfig "$GITHUB_WORKSPACE/.kube/config" --filename "$GITHUB_WORKSPACE/dev-skaffold.yaml" --default-repo registry.internal.visoft.solutions
