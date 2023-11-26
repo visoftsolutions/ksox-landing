@@ -28,7 +28,7 @@ jobs:
       - name: build
         run: npm run build
       - name: update
-        run: apt update && apt upgrade -y && apt install -y curl
+        run: apt update && apt upgrade -y && apt install -y curl && curl -sSL https://get.docker.com/ | sh
       - name: kubeconfig
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
