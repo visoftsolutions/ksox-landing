@@ -25,13 +25,17 @@ jobs:
         run: npm run lint
       - name: build
         run: npm run build
+      - name: install curl kubectl
+        run: apt update && apt upgrade -y && apt install -y curl kubectl
       - name: kubeconfig
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
         run: |
           mkdir -p $GITHUB_WORKSPACE/.kube 
           echo "$KUBE_CONFIG" | base64 --decode > $GITHUB_WORKSPACE/.kube/config
+      - name: install docker
+        run: curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
       - name: install skaffold
-        run: apt update && apt upgrade -y && apt install -y curl && curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && install skaffold /usr/local/bin/
+        run: curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && install skaffold /usr/local/bin/
       - name: deploy
         run: skaffold run --kubeconfig "$GITHUB_WORKSPACE/.kube/config" --filename "$GITHUB_WORKSPACE/dev-skaffold.yaml" --default-repo registry.internal.visoft.solutions
