@@ -29,6 +29,6 @@ jobs:
         uses: hiberbee/github-action-skaffold@1.19.0
         with:
           command: run
-          kubeconfig: "$GITHUB_WORKSPACE/.kube/config"
-          filename: "$GITHUB_WORKSPACE/dev-skaffold.yaml"
+          kubeconfig: ${{ github.workspace }}/.kube/config
+          filename: ${{ github.workspace }}/dev-skaffold.yaml
           repository: registry.internal.visoft.solutions
