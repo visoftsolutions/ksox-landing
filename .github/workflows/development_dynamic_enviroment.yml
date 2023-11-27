@@ -25,5 +25,10 @@ jobs:
         run: |
           mkdir -p $GITHUB_WORKSPACE/.kube 
           echo "$KUBE_CONFIG" | base64 --decode > $GITHUB_WORKSPACE/.kube/config
-      - name: Deploy to kubernetes
-        run: skaffold run --kubeconfig "$GITHUB_WORKSPACE/.kube/config" --filename "$GITHUB_WORKSPACE/dev-skaffold.yaml" --default-repo registry.internal.visoft.solutions
+      - name: Run Skaffold pipeline as action
+        uses: hiberbee/github-action-skaffold@1.19.0
+        with:
+          command: run
+          kubeconfig: "$GITHUB_WORKSPACE/.kube/config"
+          filename: "$GITHUB_WORKSPACE/dev-skaffold.yaml"
+          repository: registry.internal.visoft.solutions
