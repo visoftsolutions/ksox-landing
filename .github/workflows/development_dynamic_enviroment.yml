@@ -25,11 +25,13 @@ jobs:
         run: |
           mkdir -p $GITHUB_WORKSPACE/.kube 
           echo "$KUBE_CONFIG" | base64 --decode > $GITHUB_WORKSPACE/.kube/config
-      # - name: Run Skaffold pipeline as action
-      #   uses: hiberbee/github-action-skaffold@1.27.0
-      #   with:
-      #     skaffold-version: 2.9.0
-      #     command: run
-      #     kubeconfig: ${{ github.workspace }}/.kube/config
-      #     filename: ${{ github.workspace }}/dev-skaffold.yaml
-      #     repository: registry.internal.visoft.solutions
+      - name: Setup Minikube
+        uses: hiberbee/github-action-minikube@1.5.0
+      - name: Run Skaffold pipeline as action
+        uses: hiberbee/github-action-skaffold@1.27.0
+        with:
+          skaffold-version: 2.9.0
+          command: run
+          kubeconfig: ${{ github.workspace }}/.kube/config
+          filename: ${{ github.workspace }}/dev-skaffold.yaml
+          repository: registry.internal.visoft.solutions
